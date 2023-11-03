@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QtSql>
+#include <QSqlError>
 #include "areadegestao.h"
 
 
