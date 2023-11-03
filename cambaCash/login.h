@@ -17,13 +17,13 @@ class login : public QMainWindow
 public:
     login(QWidget *parent = nullptr);
     ~login();
-    QSqlDatabase database;
+   
 
 private slots:
     void on_btnentrar_clicked();
 
 private:
     Ui::login *ui;
-
+    QSqlDatabase database;
 };
 #endif // LOGIN_H
