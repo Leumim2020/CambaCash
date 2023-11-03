@@ -7,11 +7,11 @@ login::login(QWidget *parent)
     , ui(new Ui::login)
 {
     ui->setupUi(this);
-    /*database.setDatabaseName("C:/Users/HP/Documents/C++ Projects/cambaCash/cambaCash/datebase/cambadb.db");
+    database.setDatabaseName("C:/Users/HP/Documents/C++ Projects/cambaCash/cambaCash/datebase/cambadb.db");
     if(database.open())
        ui->label_db->setText("1");
     else
-        ui->label_db->setText("0");*/
+        ui->label_db->setText("0");
 
 }
 
@@ -32,7 +32,7 @@ void login::on_btnentrar_clicked()
     }
 
 
-   /* QSqlQuery query; if(database.open()){
+   QSqlQuery query; if(database.open()){
         if(query.exec("select * from tb_users where user='"+USER+"' and password='"+PASSWORD+"'")){
             if(query.next()){
                 QMessageBox::information(this,"informacao","dentro");
@@ -41,7 +41,7 @@ void login::on_btnentrar_clicked()
         else
             QMessageBox::information(this,"informacao","fora");
     }
-    */
+    
 
 }
 
