@@ -26,23 +26,18 @@ void login::on_btnentrar_clicked()
     QString USER = ui->line_user->text();
     QString PASSWORD = ui->line_pass->text();
 
-    if(USER == "cboss" && PASSWORD == "cboss1234"){
-        areadegestao area_main;
-        area_main.setModal(true);
-        area_main.exec();
-    }
+     QSqlQuery query;
 
-
-   QSqlQuery query; if(database.open()){
-        if(query.exec("select * from tb_users where user='"+USER+"' and password='"+PASSWORD+"'")){
-            if(query.next()){
-                QMessageBox::information(this,"informacao","dentro");
-            }
+    if(database.isOpen()){
+        query.prepare("SELECT * FROM usuarios WHERE user = :USER AND password = :PASSWORD");
+        query.bindValue(":user", USER);
+        query.bindValue(":password", PASSWORD);
+        if(query.exec()) {
+               QMessageBox::information(this,"informacao","dentro");
+        } else {
+            qDebug() << query.lastError().databaseText();
         }
-        else
-            QMessageBox::information(this,"informacao","fora");
     }
-    
 
 }
 
