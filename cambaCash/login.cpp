@@ -7,6 +7,7 @@ login::login(QWidget *parent)
     , ui(new Ui::login)
 {
     ui->setupUi(this);
+    database = QSqlDatabase::addDatebase("QSQLITE");
     database.setDatabaseName("C:/Users/HP/Documents/C++ Projects/cambaCash/cambaCash/datebase/cambadb.db");
     if(database.open())
        ui->label_db->setText("1");
