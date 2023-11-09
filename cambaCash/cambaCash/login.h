@@ -6,7 +6,6 @@
 #include <QSqlQuery>
 #include <QtSql>
 #include <QDebug>
-#include "areadegestao.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class login; }
@@ -26,6 +25,5 @@ private slots:
 private:
     Ui::login *ui;
     QSqlDatabase db_connect;
-    areadegestao *form2;
 };
 #endif // LOGIN_H
