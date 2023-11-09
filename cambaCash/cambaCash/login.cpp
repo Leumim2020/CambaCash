@@ -1,5 +1,6 @@
 #include "login.h"
 #include "ui_login.h"
+#include "areadegestao.h"
 #include "QMessageBox"
 
 login::login(QWidget *parent)
@@ -55,8 +56,9 @@ void login::on_btnentrar_clicked()
 
             if(query.next()){
                 if(query.value("password").toString() == ui->line_pass->text()){
-                    form2 = new areadegestao;
+                    areadegestao *form2 = new areadegestao;
                     form2->show();
+                    close();
                     ui->line_user->clear();
                     ui->line_pass->clear();
                 }else{
