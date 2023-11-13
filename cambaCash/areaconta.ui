@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>areaconta</class>
+ <widget class="QDialog" name="areaconta">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>880</width>
+    <height>640</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>880</width>
+    <height>640</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>880</width>
+    <height>640</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(59, 81, 127);</string>
+  </property>
+  <widget class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>0</y>
+     <width>10</width>
+     <height>639</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>10</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>10</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:white;
+border:none;</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>240</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>100</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>100</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <pointsize>10</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;
+font: 10pt &quot;Segoe UI&quot;;
+background-color:white;
+color:rgb(59,81,127);</string>
+   </property>
+   <property name="text">
+    <string>VOLTAR</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>110</y>
+     <width>61</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 900 15pt &quot;Segoe UI&quot;;
+color: rgb(255, 212, 38);</string>
+   </property>
+   <property name="text">
+    <string>CASH</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>90</y>
+     <width>41</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 600 45pt &quot;Segoe UI Semibold&quot;;
+color: rgb(185, 185, 185);
+</string>
+   </property>
+   <property name="text">
+    <string>C</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -10,17 +10,20 @@ CONFIG += c++17
 
 SOURCES += \
     areacash.cpp \
+    areaconta.cpp \
     areadegestao.cpp \
     main.cpp \
     login.cpp
 
 HEADERS += \
     areacash.h \
+    areaconta.h \
     areadegestao.h \
     login.h
 
 FORMS += \
     areacash.ui \
+    areaconta.ui \
     areadegestao.ui \
     login.ui
 

@@ -16,7 +16,8 @@ areadegestao::~areadegestao()
 
 void areadegestao::on_pushButton_clicked()
 {
-    areacash form3;
-    form3.exec();
+    areacash *form3 = new areacash;
+    form3->show();
+    hide();
 }
 

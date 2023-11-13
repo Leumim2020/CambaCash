@@ -38,20 +38,40 @@ namespace {
 #ifdef QT_MOC_HAS_STRINGDATA
 struct qt_meta_stringdata_CLASSareacashENDCLASS_t {};
 static constexpr auto qt_meta_stringdata_CLASSareacashENDCLASS = QtMocHelpers::stringData(
-    "areacash"
+    "areacash",
+    "on_boxmoney_textChanged",
+    "",
+    "arg1",
+    "on_pushButton_clicked",
+    "on_pushButton_conta_2_clicked"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSareacashENDCLASS_t {
-    uint offsetsAndSizes[2];
+    uint offsetsAndSizes[12];
     char stringdata0[9];
+    char stringdata1[24];
+    char stringdata2[1];
+    char stringdata3[5];
+    char stringdata4[22];
+    char stringdata5[30];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSareacashENDCLASS_t::offsetsAndSizes) + ofs), len 
 Q_CONSTINIT static const qt_meta_stringdata_CLASSareacashENDCLASS_t qt_meta_stringdata_CLASSareacashENDCLASS = {
     {
-        QT_MOC_LITERAL(0, 8)   // "areacash"
+        QT_MOC_LITERAL(0, 8),  // "areacash"
+        QT_MOC_LITERAL(9, 23),  // "on_boxmoney_textChanged"
+        QT_MOC_LITERAL(33, 0),  // ""
+        QT_MOC_LITERAL(34, 4),  // "arg1"
+        QT_MOC_LITERAL(39, 21),  // "on_pushButton_clicked"
+        QT_MOC_LITERAL(61, 29)   // "on_pushButton_conta_2_clicked"
     },
-    "areacash"
+    "areacash",
+    "on_boxmoney_textChanged",
+    "",
+    "arg1",
+    "on_pushButton_clicked",
+    "on_pushButton_conta_2_clicked"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -63,12 +83,22 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSareacashENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       0,    0, // methods
+       3,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
        0,       // signalCount
+
+ // slots: name, argc, parameters, tag, flags, initial metatype offsets
+       1,    1,   32,    2, 0x08,    1 /* Private */,
+       4,    0,   35,    2, 0x08,    3 /* Private */,
+       5,    0,   36,    2, 0x08,    4 /* Private */,
+
+ // slots: parameters
+    QMetaType::Void, QMetaType::QString,    3,
+    QMetaType::Void,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -81,17 +111,30 @@ Q_CONSTINIT const QMetaObject areacash::staticMetaObject = { {
     nullptr,
     qt_incomplete_metaTypeArray<qt_meta_stringdata_CLASSareacashENDCLASS_t,
         // Q_OBJECT / Q_GADGET
-        QtPrivate::TypeAndForceComplete<areacash, std::true_type>
+        QtPrivate::TypeAndForceComplete<areacash, std::true_type>,
+        // method 'on_boxmoney_textChanged'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
+        // method 'on_pushButton_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButton_conta_2_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
 } };
 
 void areacash::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
-    (void)_o;
-    (void)_id;
-    (void)_c;
-    (void)_a;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        auto *_t = static_cast<areacash *>(_o);
+        (void)_t;
+        switch (_id) {
+        case 0: _t->on_boxmoney_textChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 1: _t->on_pushButton_clicked(); break;
+        case 2: _t->on_pushButton_conta_2_clicked(); break;
+        default: ;
+        }
+    }
 }
 
 const QMetaObject *areacash::metaObject() const
@@ -110,6 +153,17 @@ void *areacash::qt_metacast(const char *_clname)
 int areacash::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QDialog::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 3)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 3;
+    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        if (_id < 3)
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
+        _id -= 3;
+    }
     return _id;
 }
 QT_WARNING_POP

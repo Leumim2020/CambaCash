@@ -86,6 +86,8 @@ Makefile: ../cambaCash/cambaCash.pro C:/Qt/6.6.0/mingw_64/mkspecs/win32-g++/qmak
 		C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_concurrent.pri \
 		C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_concurrent_private.pri \
 		C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_core.pri \
+		C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_core5compat.pri \
+		C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_core5compat_private.pri \
 		C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_core_private.pri \
 		C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_dbus.pri \
 		C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_dbus_private.pri \
@@ -178,6 +180,8 @@ Makefile: ../cambaCash/cambaCash.pro C:/Qt/6.6.0/mingw_64/mkspecs/win32-g++/qmak
 		C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_quicktestutilsprivate_private.pri \
 		C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_quickwidgets.pri \
 		C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_quickwidgets_private.pri \
+		C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_shadertools.pri \
+		C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_shadertools_private.pri \
 		C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_sql.pri \
 		C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_sql_private.pri \
 		C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_svg.pri \
@@ -249,6 +253,8 @@ C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_ext_libpng.pri:
 C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_concurrent.pri:
 C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_concurrent_private.pri:
 C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_core.pri:
+C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_core5compat.pri:
+C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_core5compat_private.pri:
 C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_core_private.pri:
 C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_dbus.pri:
 C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_dbus_private.pri:
@@ -341,6 +347,8 @@ C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_quicktemplates2_private.pri:
 C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_quicktestutilsprivate_private.pri:
 C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_quickwidgets.pri:
 C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_quickwidgets_private.pri:
+C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_shadertools.pri:
+C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_shadertools_private.pri:
 C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_sql.pri:
 C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_sql_private.pri:
 C:/Qt/6.6.0/mingw_64/mkspecs/modules/qt_lib_svg.pri:

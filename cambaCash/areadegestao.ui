@@ -97,7 +97,7 @@ color: rgb(255, 212, 38);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">font: 600 45pt &quot;Segoe UI Semibold&quot;;
-</string>
+color: rgb(208, 208, 208);</string>
    </property>
    <property name="text">
     <string>C</string>
@@ -108,7 +108,7 @@ color: rgb(255, 212, 38);</string>
     <rect>
      <x>430</x>
      <y>300</y>
-     <width>291</width>
+     <width>281</width>
      <height>31</height>
     </rect>
    </property>
@@ -117,14 +117,15 @@ color: rgb(255, 212, 38);</string>
      <family>Segoe UI</family>
      <pointsize>20</pointsize>
      <italic>false</italic>
-     <bold>true</bold>
+     <bold>false</bold>
     </font>
    </property>
    <property name="cursor">
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 212, 38);</string>
+    <string notr="true">color: rgb(255, 212, 38);
+font: 20pt &quot;Segoe UI&quot;;</string>
    </property>
    <property name="text">
     <string>BENVINDO AO CAMBA</string>
@@ -133,8 +134,8 @@ color: rgb(255, 212, 38);</string>
   <widget class="QPushButton" name="pushButton_4">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>400</y>
+     <x>70</x>
+     <y>390</y>
      <width>100</width>
      <height>30</height>
     </rect>
@@ -153,7 +154,10 @@ color: rgb(255, 212, 38);</string>
    </property>
    <property name="font">
     <font>
-     <bold>true</bold>
+     <family>Segoe UI</family>
+     <pointsize>10</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
     </font>
    </property>
    <property name="cursor">
@@ -161,6 +165,7 @@ color: rgb(255, 212, 38);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border:1px solid white;
+font: 10pt &quot;Segoe UI&quot;;
 background-color:white;
 color:rgb(59,81,127);</string>
    </property>
@@ -172,7 +177,7 @@ color:rgb(59,81,127);</string>
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>346</y>
+     <y>330</y>
      <width>170</width>
      <height>30</height>
     </rect>
@@ -191,7 +196,10 @@ color:rgb(59,81,127);</string>
    </property>
    <property name="font">
     <font>
-     <bold>true</bold>
+     <family>Segoe UI</family>
+     <pointsize>10</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
     </font>
    </property>
    <property name="cursor">
@@ -199,6 +207,7 @@ color:rgb(59,81,127);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border:1px solid white;
+font: 10pt &quot;Segoe UI&quot;;
 background-color:white;
 color:rgb(59,81,127);</string>
    </property>
@@ -229,7 +238,10 @@ color:rgb(59,81,127);</string>
    </property>
    <property name="font">
     <font>
-     <bold>true</bold>
+     <family>Segoe UI</family>
+     <pointsize>10</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
     </font>
    </property>
    <property name="cursor">
@@ -237,6 +249,7 @@ color:rgb(59,81,127);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border:1px solid white;
+font: 10pt &quot;Segoe UI&quot;;
 background-color:white;
 color:rgb(59,81,127);</string>
    </property>
@@ -248,7 +261,7 @@ color:rgb(59,81,127);</string>
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>280</y>
+     <y>270</y>
      <width>170</width>
      <height>30</height>
     </rect>
@@ -267,7 +280,10 @@ color:rgb(59,81,127);</string>
    </property>
    <property name="font">
     <font>
-     <bold>true</bold>
+     <family>Segoe UI</family>
+     <pointsize>10</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
     </font>
    </property>
    <property name="cursor">
@@ -275,11 +291,12 @@ color:rgb(59,81,127);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border:1px solid white;
+font: 10pt &quot;Segoe UI&quot;;
 background-color:white;
 color:rgb(59,81,127);</string>
    </property>
    <property name="text">
-    <string>VIEW</string>
+    <string>VIEW E EDITAR CONTA</string>
    </property>
   </widget>
  </widget>

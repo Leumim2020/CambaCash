@@ -45,20 +45,24 @@ public:
         centralwidget->setObjectName("centralwidget");
         btnentrar = new QPushButton(centralwidget);
         btnentrar->setObjectName("btnentrar");
-        btnentrar->setGeometry(QRect(90, 250, 101, 31));
+        btnentrar->setGeometry(QRect(90, 240, 101, 31));
         QFont font;
-        font.setBold(true);
+        font.setFamilies({QString::fromUtf8("Segoe UI")});
+        font.setPointSize(10);
+        font.setBold(false);
+        font.setItalic(false);
         btnentrar->setFont(font);
         btnentrar->setCursor(QCursor(Qt::PointingHandCursor));
         btnentrar->setMouseTracking(false);
         btnentrar->setStyleSheet(QString::fromUtf8("background-color:white;\n"
+"font: 10pt \"Segoe UI\";\n"
 "border: 1px solid white;\n"
 "color:rgb(59,81,127);"));
         label_3 = new QLabel(centralwidget);
         label_3->setObjectName("label_3");
         label_3->setGeometry(QRect(90, 40, 41, 61));
         label_3->setStyleSheet(QString::fromUtf8("font: 600 45pt \"Segoe UI Semibold\";\n"
-""));
+"color: rgb(208, 208, 208);"));
         line_user = new QLineEdit(centralwidget);
         line_user->setObjectName("line_user");
         line_user->setGeometry(QRect(50, 130, 181, 31));
@@ -66,7 +70,7 @@ public:
         line_user->setCursor(QCursor(Qt::IBeamCursor));
         line_user->setMouseTracking(false);
         line_user->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        line_user->setMaxLength(12);
+        line_user->setMaxLength(14);
         line_pass = new QLineEdit(centralwidget);
         line_pass->setObjectName("line_pass");
         line_pass->setGeometry(QRect(50, 190, 181, 31));
@@ -74,7 +78,7 @@ public:
         line_pass->setCursor(QCursor(Qt::IBeamCursor));
         line_pass->setMouseTracking(false);
         line_pass->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        line_pass->setMaxLength(10);
+        line_pass->setMaxLength(12);
         line_pass->setEchoMode(QLineEdit::Password);
         label_4 = new QLabel(centralwidget);
         label_4->setObjectName("label_4");

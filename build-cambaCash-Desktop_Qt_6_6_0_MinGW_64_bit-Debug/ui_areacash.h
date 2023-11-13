@@ -14,13 +14,11 @@
 #include <QtWidgets/QCalendarWidget>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QDoubleSpinBox>
 #include <QtWidgets/QFrame>
-#include <QtWidgets/QGridLayout>
-#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QSpinBox>
-#include <QtWidgets/QWidget>
+#include <QtWidgets/QUndoView>
 
 QT_BEGIN_NAMESPACE
 
@@ -29,16 +27,20 @@ class Ui_areacash
 public:
     QFrame *line;
     QLabel *label_3;
-    QPushButton *pushButton;
     QLabel *label_4;
-    QPushButton *pushButton_2;
-    QWidget *gridLayoutWidget;
-    QGridLayout *gridLayout;
-    QComboBox *comboBox;
-    QSpinBox *spinBox;
-    QWidget *horizontalLayoutWidget;
-    QHBoxLayout *horizontalLayout;
-    QCalendarWidget *calendarWidget;
+    QPushButton *pushButton_conta_2;
+    QLabel *label;
+    QLabel *label_5;
+    QPushButton *pushButton;
+    QPushButton *pushButton_conta;
+    QUndoView *undoView;
+    QCalendarWidget *calendar;
+    QComboBox *boxarea;
+    QLabel *label_6;
+    QDoubleSpinBox *boxmoney;
+    QLabel *label_7;
+    QLabel *label_8;
+    QLabel *label_test;
 
     void setupUi(QDialog *areacash)
     {
@@ -62,70 +64,122 @@ public:
         label_3->setGeometry(QRect(70, 70, 41, 61));
         label_3->setCursor(QCursor(Qt::PointingHandCursor));
         label_3->setStyleSheet(QString::fromUtf8("font: 600 45pt \"Segoe UI Semibold\";\n"
+"color: rgb(185, 185, 185);\n"
 ""));
-        pushButton = new QPushButton(areacash);
-        pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(40, 190, 170, 30));
-        pushButton->setMinimumSize(QSize(170, 30));
-        pushButton->setMaximumSize(QSize(0, 16777215));
-        QFont font;
-        font.setPointSize(10);
-        font.setBold(true);
-        pushButton->setFont(font);
-        pushButton->setCursor(QCursor(Qt::PointingHandCursor));
-        pushButton->setStyleSheet(QString::fromUtf8("border:1px solid white;\n"
-"background-color:white;\n"
-"color:rgb(59,81,127);"));
         label_4 = new QLabel(areacash);
         label_4->setObjectName("label_4");
         label_4->setGeometry(QRect(110, 90, 61, 31));
         label_4->setCursor(QCursor(Qt::PointingHandCursor));
         label_4->setStyleSheet(QString::fromUtf8("font: 900 15pt \"Segoe UI\";\n"
 "color: rgb(255, 212, 38);"));
-        pushButton_2 = new QPushButton(areacash);
-        pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(700, 430, 171, 31));
-        pushButton_2->setFont(font);
-        pushButton_2->setCursor(QCursor(Qt::PointingHandCursor));
-        pushButton_2->setStyleSheet(QString::fromUtf8("border:1px solid white;\n"
+        pushButton_conta_2 = new QPushButton(areacash);
+        pushButton_conta_2->setObjectName("pushButton_conta_2");
+        pushButton_conta_2->setGeometry(QRect(700, 500, 171, 31));
+        QFont font;
+        font.setFamilies({QString::fromUtf8("Segoe UI")});
+        font.setPointSize(10);
+        font.setBold(false);
+        font.setItalic(false);
+        pushButton_conta_2->setFont(font);
+        pushButton_conta_2->setCursor(QCursor(Qt::PointingHandCursor));
+        pushButton_conta_2->setStyleSheet(QString::fromUtf8("border:1px solid white;\n"
+"font: 10pt \"Segoe UI\";\n"
 "background-color:white;\n"
 "color:rgb(59,81,127);"));
-        gridLayoutWidget = new QWidget(areacash);
-        gridLayoutWidget->setObjectName("gridLayoutWidget");
-        gridLayoutWidget->setGeometry(QRect(260, 220, 201, 181));
-        gridLayout = new QGridLayout(gridLayoutWidget);
-        gridLayout->setObjectName("gridLayout");
-        gridLayout->setContentsMargins(0, 0, 0, 0);
-        comboBox = new QComboBox(gridLayoutWidget);
-        comboBox->setObjectName("comboBox");
-        comboBox->setMinimumSize(QSize(170, 40));
-        comboBox->setMaximumSize(QSize(170, 40));
-        comboBox->setCursor(QCursor(Qt::IBeamCursor));
-        comboBox->setStyleSheet(QString::fromUtf8("background-color:white;"));
-
-        gridLayout->addWidget(comboBox, 0, 0, 1, 1);
-
-        spinBox = new QSpinBox(gridLayoutWidget);
-        spinBox->setObjectName("spinBox");
-        spinBox->setMinimumSize(QSize(170, 40));
-        spinBox->setMaximumSize(QSize(170, 40));
-        spinBox->setCursor(QCursor(Qt::IBeamCursor));
-        spinBox->setStyleSheet(QString::fromUtf8("background-color:rgb(255, 255, 255);"));
-
-        gridLayout->addWidget(spinBox, 1, 0, 1, 1);
-
-        horizontalLayoutWidget = new QWidget(areacash);
-        horizontalLayoutWidget->setObjectName("horizontalLayoutWidget");
-        horizontalLayoutWidget->setGeometry(QRect(470, 220, 401, 201));
-        horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
-        horizontalLayout->setObjectName("horizontalLayout");
-        horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        calendarWidget = new QCalendarWidget(horizontalLayoutWidget);
-        calendarWidget->setObjectName("calendarWidget");
-        calendarWidget->setCursor(QCursor(Qt::PointingHandCursor));
-
-        horizontalLayout->addWidget(calendarWidget);
-
+        label = new QLabel(areacash);
+        label->setObjectName("label");
+        label->setGeometry(QRect(810, 600, 51, 31));
+        label->setStyleSheet(QString::fromUtf8("font: 10pt \"Segoe UI\";\n"
+"color: white;"));
+        label_5 = new QLabel(areacash);
+        label_5->setObjectName("label_5");
+        label_5->setGeometry(QRect(750, 600, 51, 31));
+        label_5->setCursor(QCursor(Qt::PointingHandCursor));
+        label_5->setStyleSheet(QString::fromUtf8("font: 10pt \"Segoe UI\";\n"
+"color: white;"));
+        pushButton = new QPushButton(areacash);
+        pushButton->setObjectName("pushButton");
+        pushButton->setGeometry(QRect(70, 290, 100, 30));
+        pushButton->setMinimumSize(QSize(100, 30));
+        pushButton->setMaximumSize(QSize(100, 30));
+        pushButton->setFont(font);
+        pushButton->setCursor(QCursor(Qt::PointingHandCursor));
+        pushButton->setStyleSheet(QString::fromUtf8("border:1px solid white;\n"
+"font: 10pt \"Segoe UI\";\n"
+"background-color:white;\n"
+"color:rgb(59,81,127);"));
+        pushButton_conta = new QPushButton(areacash);
+        pushButton_conta->setObjectName("pushButton_conta");
+        pushButton_conta->setGeometry(QRect(40, 230, 170, 30));
+        pushButton_conta->setMinimumSize(QSize(170, 30));
+        pushButton_conta->setMaximumSize(QSize(0, 16777215));
+        pushButton_conta->setFont(font);
+        pushButton_conta->setCursor(QCursor(Qt::PointingHandCursor));
+        pushButton_conta->setStyleSheet(QString::fromUtf8("border:1px solid white;\n"
+"font: 10pt \"Segoe UI\";\n"
+"background-color:white;\n"
+"color:rgb(59,81,127);"));
+        undoView = new QUndoView(areacash);
+        undoView->setObjectName("undoView");
+        undoView->setGeometry(QRect(260, 230, 611, 261));
+        QFont font1;
+        font1.setBold(true);
+        undoView->setFont(font1);
+        undoView->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        calendar = new QCalendarWidget(areacash);
+        calendar->setObjectName("calendar");
+        calendar->setGeometry(QRect(490, 240, 371, 231));
+        calendar->setCursor(QCursor(Qt::PointingHandCursor));
+        calendar->setStyleSheet(QString::fromUtf8("\n"
+"color:black;"));
+        boxarea = new QComboBox(areacash);
+        boxarea->addItem(QString());
+        boxarea->addItem(QString());
+        boxarea->addItem(QString());
+        boxarea->addItem(QString());
+        boxarea->addItem(QString());
+        boxarea->setObjectName("boxarea");
+        boxarea->setGeometry(QRect(270, 310, 208, 40));
+        boxarea->setMinimumSize(QSize(208, 40));
+        boxarea->setMaximumSize(QSize(208, 40));
+        boxarea->setCursor(QCursor(Qt::PointingHandCursor));
+        boxarea->setStyleSheet(QString::fromUtf8("border:none;\n"
+"color: rgb(255, 255, 255);\n"
+"\n"
+"\n"
+""));
+        label_6 = new QLabel(areacash);
+        label_6->setObjectName("label_6");
+        label_6->setGeometry(QRect(450, 430, 31, 21));
+        label_6->setCursor(QCursor(Qt::PointingHandCursor));
+        label_6->setStyleSheet(QString::fromUtf8("font: 15pt \"Segoe UI\";\n"
+"color: rgb(255, 212, 38);"));
+        boxmoney = new QDoubleSpinBox(areacash);
+        boxmoney->setObjectName("boxmoney");
+        boxmoney->setGeometry(QRect(270, 390, 210, 40));
+        boxmoney->setMinimumSize(QSize(210, 40));
+        boxmoney->setMaximumSize(QSize(210, 40));
+        boxmoney->setStyleSheet(QString::fromUtf8("border:none;\n"
+"font: 12pt \"Segoe UI\";\n"
+"color: rgb(255, 255, 255);"));
+        boxmoney->setMaximum(100000000.000000000000000);
+        boxmoney->setStepType(QAbstractSpinBox::DefaultStepType);
+        label_7 = new QLabel(areacash);
+        label_7->setObjectName("label_7");
+        label_7->setGeometry(QRect(270, 370, 211, 21));
+        label_7->setCursor(QCursor(Qt::PointingHandCursor));
+        label_7->setStyleSheet(QString::fromUtf8("font: 10pt \"Segoe UI\";\n"
+"color: white;"));
+        label_8 = new QLabel(areacash);
+        label_8->setObjectName("label_8");
+        label_8->setGeometry(QRect(260, 190, 381, 31));
+        label_8->setCursor(QCursor(Qt::PointingHandCursor));
+        label_8->setStyleSheet(QString::fromUtf8("font: 15pt \"Segoe UI \";\n"
+"color: rgb(185, 185, 185);\n"
+""));
+        label_test = new QLabel(areacash);
+        label_test->setObjectName("label_test");
+        label_test->setGeometry(QRect(270, 520, 51, 51));
 
         retranslateUi(areacash);
 
@@ -136,9 +190,23 @@ public:
     {
         areacash->setWindowTitle(QCoreApplication::translate("areacash", "Dialog", nullptr));
         label_3->setText(QCoreApplication::translate("areacash", "C", nullptr));
-        pushButton->setText(QCoreApplication::translate("areacash", "VOLTAR", nullptr));
         label_4->setText(QCoreApplication::translate("areacash", "CASH", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("areacash", "SUBMETER PAGAMENTO", nullptr));
+        pushButton_conta_2->setText(QCoreApplication::translate("areacash", "SUBMETER CONTA", nullptr));
+        label->setText(QCoreApplication::translate("areacash", "00:00:00", nullptr));
+        label_5->setText(QCoreApplication::translate("areacash", "TEMPO:", nullptr));
+        pushButton->setText(QCoreApplication::translate("areacash", "VOLTAR", nullptr));
+        pushButton_conta->setText(QCoreApplication::translate("areacash", "VER CONTAS", nullptr));
+        boxarea->setItemText(0, QCoreApplication::translate("areacash", "SELECIONE LOJA...", nullptr));
+        boxarea->setItemText(1, QCoreApplication::translate("areacash", "BAR", nullptr));
+        boxarea->setItemText(2, QCoreApplication::translate("areacash", "BARBEARIA", nullptr));
+        boxarea->setItemText(3, QCoreApplication::translate("areacash", "LOJA ZAP", nullptr));
+        boxarea->setItemText(4, QCoreApplication::translate("areacash", "SAL\303\203O  DE BELEZA", nullptr));
+
+        boxarea->setPlaceholderText(QCoreApplication::translate("areacash", "SELECIONA \303\201REA CAMBA", nullptr));
+        label_6->setText(QCoreApplication::translate("areacash", "KZ", nullptr));
+        label_7->setText(QCoreApplication::translate("areacash", "DIGITE QUANTIA ARRECADADA", nullptr));
+        label_8->setText(QCoreApplication::translate("areacash", "PRESTAR CONTA AO CAMBA", nullptr));
+        label_test->setText(QCoreApplication::translate("areacash", "TextLabel", nullptr));
     } // retranslateUi
 
 };

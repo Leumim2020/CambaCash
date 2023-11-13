@@ -70,38 +70,44 @@ public:
         label_3->setGeometry(QRect(70, 90, 41, 61));
         label_3->setCursor(QCursor(Qt::PointingHandCursor));
         label_3->setStyleSheet(QString::fromUtf8("font: 600 45pt \"Segoe UI Semibold\";\n"
-""));
+"color: rgb(208, 208, 208);"));
         label_5 = new QLabel(areadegestao);
         label_5->setObjectName("label_5");
-        label_5->setGeometry(QRect(430, 300, 291, 31));
+        label_5->setGeometry(QRect(430, 300, 281, 31));
         QFont font;
         font.setFamilies({QString::fromUtf8("Segoe UI")});
         font.setPointSize(20);
-        font.setBold(true);
+        font.setBold(false);
         font.setItalic(false);
         label_5->setFont(font);
         label_5->setCursor(QCursor(Qt::PointingHandCursor));
-        label_5->setStyleSheet(QString::fromUtf8("color: rgb(255, 212, 38);"));
+        label_5->setStyleSheet(QString::fromUtf8("color: rgb(255, 212, 38);\n"
+"font: 20pt \"Segoe UI\";"));
         pushButton_4 = new QPushButton(areadegestao);
         pushButton_4->setObjectName("pushButton_4");
-        pushButton_4->setGeometry(QRect(80, 400, 100, 30));
+        pushButton_4->setGeometry(QRect(70, 390, 100, 30));
         pushButton_4->setMinimumSize(QSize(100, 30));
         pushButton_4->setMaximumSize(QSize(100, 30));
         QFont font1;
-        font1.setBold(true);
+        font1.setFamilies({QString::fromUtf8("Segoe UI")});
+        font1.setPointSize(10);
+        font1.setBold(false);
+        font1.setItalic(false);
         pushButton_4->setFont(font1);
         pushButton_4->setCursor(QCursor(Qt::PointingHandCursor));
         pushButton_4->setStyleSheet(QString::fromUtf8("border:1px solid white;\n"
+"font: 10pt \"Segoe UI\";\n"
 "background-color:white;\n"
 "color:rgb(59,81,127);"));
         pushButton_3 = new QPushButton(areadegestao);
         pushButton_3->setObjectName("pushButton_3");
-        pushButton_3->setGeometry(QRect(40, 346, 170, 30));
+        pushButton_3->setGeometry(QRect(40, 330, 170, 30));
         pushButton_3->setMinimumSize(QSize(170, 30));
         pushButton_3->setMaximumSize(QSize(0, 16777215));
         pushButton_3->setFont(font1);
         pushButton_3->setCursor(QCursor(Qt::PointingHandCursor));
         pushButton_3->setStyleSheet(QString::fromUtf8("border:1px solid white;\n"
+"font: 10pt \"Segoe UI\";\n"
 "background-color:white;\n"
 "color:rgb(59,81,127);"));
         pushButton = new QPushButton(areadegestao);
@@ -112,16 +118,18 @@ public:
         pushButton->setFont(font1);
         pushButton->setCursor(QCursor(Qt::PointingHandCursor));
         pushButton->setStyleSheet(QString::fromUtf8("border:1px solid white;\n"
+"font: 10pt \"Segoe UI\";\n"
 "background-color:white;\n"
 "color:rgb(59,81,127);"));
         pushButton_2 = new QPushButton(areadegestao);
         pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(40, 280, 170, 30));
+        pushButton_2->setGeometry(QRect(40, 270, 170, 30));
         pushButton_2->setMinimumSize(QSize(170, 30));
         pushButton_2->setMaximumSize(QSize(0, 16777215));
         pushButton_2->setFont(font1);
         pushButton_2->setCursor(QCursor(Qt::PointingHandCursor));
         pushButton_2->setStyleSheet(QString::fromUtf8("border:1px solid white;\n"
+"font: 10pt \"Segoe UI\";\n"
 "background-color:white;\n"
 "color:rgb(59,81,127);"));
 
@@ -139,7 +147,7 @@ public:
         pushButton_4->setText(QCoreApplication::translate("areadegestao", "BAZAR", nullptr));
         pushButton_3->setText(QCoreApplication::translate("areadegestao", "RELAT\303\223RIO", nullptr));
         pushButton->setText(QCoreApplication::translate("areadegestao", "CASH", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("areadegestao", "VIEW", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("areadegestao", "VIEW E EDITAR CONTA", nullptr));
     } // retranslateUi
 
 };
