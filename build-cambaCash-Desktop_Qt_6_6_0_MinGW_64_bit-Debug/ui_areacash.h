@@ -36,7 +36,6 @@ public:
     QUndoView *undoView;
     QCalendarWidget *calendar;
     QComboBox *boxarea;
-    QLabel *label_6;
     QDoubleSpinBox *boxmoney;
     QLabel *label_7;
     QLabel *label_8;
@@ -132,6 +131,11 @@ public:
         calendar->setCursor(QCursor(Qt::PointingHandCursor));
         calendar->setStyleSheet(QString::fromUtf8("\n"
 "color:black;"));
+        calendar->setGridVisible(true);
+        calendar->setSelectionMode(QCalendarWidget::SingleSelection);
+        calendar->setHorizontalHeaderFormat(QCalendarWidget::ShortDayNames);
+        calendar->setVerticalHeaderFormat(QCalendarWidget::NoVerticalHeader);
+        calendar->setNavigationBarVisible(false);
         boxarea = new QComboBox(areacash);
         boxarea->addItem(QString());
         boxarea->addItem(QString());
@@ -148,12 +152,6 @@ public:
 "\n"
 "\n"
 ""));
-        label_6 = new QLabel(areacash);
-        label_6->setObjectName("label_6");
-        label_6->setGeometry(QRect(450, 430, 31, 21));
-        label_6->setCursor(QCursor(Qt::PointingHandCursor));
-        label_6->setStyleSheet(QString::fromUtf8("font: 15pt \"Segoe UI\";\n"
-"color: rgb(255, 212, 38);"));
         boxmoney = new QDoubleSpinBox(areacash);
         boxmoney->setObjectName("boxmoney");
         boxmoney->setGeometry(QRect(270, 390, 210, 40));
@@ -179,7 +177,7 @@ public:
 ""));
         label_test = new QLabel(areacash);
         label_test->setObjectName("label_test");
-        label_test->setGeometry(QRect(270, 520, 51, 51));
+        label_test->setGeometry(QRect(270, 520, 281, 51));
 
         retranslateUi(areacash);
 
@@ -203,7 +201,7 @@ public:
         boxarea->setItemText(4, QCoreApplication::translate("areacash", "SAL\303\203O  DE BELEZA", nullptr));
 
         boxarea->setPlaceholderText(QCoreApplication::translate("areacash", "SELECIONA \303\201REA CAMBA", nullptr));
-        label_6->setText(QCoreApplication::translate("areacash", "KZ", nullptr));
+        boxmoney->setSuffix(QCoreApplication::translate("areacash", "                          AOA", nullptr));
         label_7->setText(QCoreApplication::translate("areacash", "DIGITE QUANTIA ARRECADADA", nullptr));
         label_8->setText(QCoreApplication::translate("areacash", "PRESTAR CONTA AO CAMBA", nullptr));
         label_test->setText(QCoreApplication::translate("areacash", "TextLabel", nullptr));

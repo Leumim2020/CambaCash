@@ -283,6 +283,21 @@ color:rgb(59,81,127);</string>
     <string notr="true">
 color:black;</string>
    </property>
+   <property name="gridVisible">
+    <bool>true</bool>
+   </property>
+   <property name="selectionMode">
+    <enum>QCalendarWidget::SingleSelection</enum>
+   </property>
+   <property name="horizontalHeaderFormat">
+    <enum>QCalendarWidget::ShortDayNames</enum>
+   </property>
+   <property name="verticalHeaderFormat">
+    <enum>QCalendarWidget::NoVerticalHeader</enum>
+   </property>
+   <property name="navigationBarVisible">
+    <bool>false</bool>
+   </property>
   </widget>
   <widget class="QComboBox" name="boxarea">
    <property name="geometry">
@@ -344,26 +359,6 @@ color: rgb(255, 255, 255);
     </property>
    </item>
   </widget>
-  <widget class="QLabel" name="label_6">
-   <property name="geometry">
-    <rect>
-     <x>450</x>
-     <y>430</y>
-     <width>31</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="cursor">
-    <cursorShape>PointingHandCursor</cursorShape>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 15pt &quot;Segoe UI&quot;;
-color: rgb(255, 212, 38);</string>
-   </property>
-   <property name="text">
-    <string>KZ</string>
-   </property>
-  </widget>
   <widget class="QDoubleSpinBox" name="boxmoney">
    <property name="geometry">
     <rect>
@@ -389,6 +384,9 @@ color: rgb(255, 212, 38);</string>
     <string notr="true">border:none;
 font: 12pt &quot;Segoe UI&quot;;
 color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="suffix">
+    <string>                          AOA</string>
    </property>
    <property name="maximum">
     <double>100000000.000000000000000</double>
@@ -443,7 +441,7 @@ color: rgb(185, 185, 185);
     <rect>
      <x>270</x>
      <y>520</y>
-     <width>51</width>
+     <width>281</width>
      <height>51</height>
     </rect>
    </property>

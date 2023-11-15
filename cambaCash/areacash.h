@@ -22,7 +22,6 @@ private slots:
 
 private:
     Ui::areacash *ui;
-    const QString money;
 };
 
 #endif // AREACASH_H
