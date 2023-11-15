@@ -1,6 +1,7 @@
 #include "areacash.h"
 #include "ui_areacash.h"
 #include "areadegestao.h"
+#include "QMessageBox"
 
 areacash::areacash(QWidget *parent) :
     QDialog(parent),
@@ -24,9 +25,22 @@ void areacash::on_pushButton_clicked()
 
 void areacash::on_pushButton_conta_2_clicked()
 {
-    double money = ui->boxmoney->value();
-    QString date = ui->calendar->selectedDate().toString();
-    ui->label_test->setText(date);
+
+    if(ui->boxarea->currentText().isEmpty() && !ui->boxmoney->value()){
+
+        QMessageBox::warning(this,"Informação","Área e quantia(AOA) não preenchidas");
+
+    }else if(ui->boxarea->currentText().isEmpty() && ui->boxmoney->value()){
+
+        QMessageBox::warning(this,"Informação","Área não preenchida");
+
+    }else if(!ui->boxarea->currentText().isEmpty() && !ui->boxmoney->value()){
+
+        QMessageBox::warning(this,"Informação","Quantia(AOA) não preenchida");
+
+    }else{
+        QMessageBox::warning(this,"Informação","Dados preenchidos");
+    }
 }
 
 
