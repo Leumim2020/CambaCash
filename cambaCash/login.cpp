@@ -43,7 +43,7 @@ void login::on_btnentrar_clicked()
         QMessageBox::warning(this,"Informção","Você não digitou senha");
         ui->line_pass->setFocus();
 
-    }else if(!(ui->line_user->text().isEmpty()) && !(ui->line_pass->text().isEmpty())){
+    }else{
 
         if(db_connect.isOpen()){
 
