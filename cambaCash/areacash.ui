@@ -268,6 +268,9 @@ color:rgb(59,81,127);</string>
    </property>
   </widget>
   <widget class="QCalendarWidget" name="calendar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>490</x>
@@ -298,25 +301,28 @@ color:black;</string>
    <property name="navigationBarVisible">
     <bool>false</bool>
    </property>
+   <property name="dateEditEnabled">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QComboBox" name="boxarea">
    <property name="geometry">
     <rect>
      <x>270</x>
      <y>310</y>
-     <width>208</width>
+     <width>211</width>
      <height>40</height>
     </rect>
    </property>
    <property name="minimumSize">
     <size>
-     <width>208</width>
+     <width>211</width>
      <height>40</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
-     <width>208</width>
+     <width>211</width>
      <height>40</height>
     </size>
    </property>
@@ -331,54 +337,32 @@ color: rgb(255, 255, 255);
 </string>
    </property>
    <property name="placeholderText">
-    <string>SELECIONA ÁREA CAMBA</string>
+    <string/>
    </property>
-   <item>
-    <property name="text">
-     <string>SELECIONE LOJA...</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>BAR</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>BARBEARIA</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>LOJA ZAP</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>SALÃO  DE BELEZA</string>
-    </property>
-   </item>
   </widget>
   <widget class="QDoubleSpinBox" name="boxmoney">
    <property name="geometry">
     <rect>
      <x>270</x>
      <y>390</y>
-     <width>210</width>
+     <width>211</width>
      <height>40</height>
     </rect>
    </property>
    <property name="minimumSize">
     <size>
-     <width>210</width>
+     <width>211</width>
      <height>40</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
-     <width>210</width>
+     <width>211</width>
      <height>40</height>
     </size>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
     <string notr="true">border:none;
@@ -386,7 +370,10 @@ font: 12pt &quot;Segoe UI&quot;;
 color: rgb(255, 255, 255);</string>
    </property>
    <property name="suffix">
-    <string>                          AOA</string>
+    <string>           AOA</string>
+   </property>
+   <property name="decimals">
+    <number>2</number>
    </property>
    <property name="maximum">
     <double>100000000.000000000000000</double>
@@ -447,6 +434,26 @@ color: rgb(185, 185, 185);
    </property>
    <property name="text">
     <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>290</y>
+     <width>211</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt &quot;Segoe UI&quot;;
+color: white;</string>
+   </property>
+   <property name="text">
+    <string>SELECIONA ÁREA CAMBA</string>
    </property>
   </widget>
  </widget>
