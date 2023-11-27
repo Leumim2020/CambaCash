@@ -33,6 +33,8 @@ public:
     QPushButton *pushButton_3;
     QPushButton *pushButton;
     QPushButton *pushButton_2;
+    QLabel *label;
+    QLabel *label_2;
 
     void setupUi(QDialog *areadegestao)
     {
@@ -73,7 +75,7 @@ public:
 "color: rgb(208, 208, 208);"));
         label_5 = new QLabel(areadegestao);
         label_5->setObjectName("label_5");
-        label_5->setGeometry(QRect(430, 300, 281, 31));
+        label_5->setGeometry(QRect(520, 210, 241, 31));
         QFont font;
         font.setFamilies({QString::fromUtf8("Segoe UI")});
         font.setPointSize(20);
@@ -95,10 +97,17 @@ public:
         font1.setItalic(false);
         pushButton_4->setFont(font1);
         pushButton_4->setCursor(QCursor(Qt::PointingHandCursor));
-        pushButton_4->setStyleSheet(QString::fromUtf8("border:1px solid white;\n"
-"font: 10pt \"Segoe UI\";\n"
-"background-color:white;\n"
-"color:rgb(59,81,127);"));
+        pushButton_4->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	border:1px solid white;\n"
+"	background-color:white;\n"
+"	background-image: url(:/area/area/back.png);\n"
+"	background-repeat:none;\n"
+"	color:rgb(59,81,127);\n"
+"	font: 10pt \"Segoe UI\";\n"
+"}\n"
+"QPushButton:hover{\n"
+"	border:1px solid #0090d8;\n"
+"}"));
         pushButton_3 = new QPushButton(areadegestao);
         pushButton_3->setObjectName("pushButton_3");
         pushButton_3->setGeometry(QRect(40, 330, 170, 30));
@@ -106,32 +115,70 @@ public:
         pushButton_3->setMaximumSize(QSize(0, 16777215));
         pushButton_3->setFont(font1);
         pushButton_3->setCursor(QCursor(Qt::PointingHandCursor));
-        pushButton_3->setStyleSheet(QString::fromUtf8("border:1px solid white;\n"
-"font: 10pt \"Segoe UI\";\n"
-"background-color:white;\n"
-"color:rgb(59,81,127);"));
+        pushButton_3->setStyleSheet(QString::fromUtf8("QPushButton{	\n"
+"	border:1px solid white;\n"
+"	background-color:white;\n"
+"	background-repeat:none;\n"
+"	background-image: url(:/area/area/relatorio.png);\n"
+"	color:rgb(59,81,127);\n"
+"	font: 10pt \"Segoe UI\";\n"
+"}\n"
+"QPushButton:hover{\n"
+"	border:1px solid #0090d8;\n"
+"}"));
         pushButton = new QPushButton(areadegestao);
         pushButton->setObjectName("pushButton");
         pushButton->setGeometry(QRect(40, 214, 170, 30));
         pushButton->setMinimumSize(QSize(170, 30));
-        pushButton->setMaximumSize(QSize(0, 16777215));
+        pushButton->setMaximumSize(QSize(170, 35));
         pushButton->setFont(font1);
         pushButton->setCursor(QCursor(Qt::PointingHandCursor));
-        pushButton->setStyleSheet(QString::fromUtf8("border:1px solid white;\n"
-"font: 10pt \"Segoe UI\";\n"
-"background-color:white;\n"
-"color:rgb(59,81,127);"));
+        pushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	border:1px solid white;\n"
+"	background-color:white;\n"
+"	background-image: url(:/area/area/cash.png);\n"
+"	background-repeat:none;\n"
+"	color:rgb(59,81,127);\n"
+"	font: 10pt \"Segoe UI\";\n"
+"}\n"
+"QPushButton:hover{\n"
+"	border:1.2px solid #0090d8;\n"
+"}\n"
+""));
         pushButton_2 = new QPushButton(areadegestao);
         pushButton_2->setObjectName("pushButton_2");
         pushButton_2->setGeometry(QRect(40, 270, 170, 30));
         pushButton_2->setMinimumSize(QSize(170, 30));
-        pushButton_2->setMaximumSize(QSize(0, 16777215));
+        pushButton_2->setMaximumSize(QSize(170, 35));
         pushButton_2->setFont(font1);
         pushButton_2->setCursor(QCursor(Qt::PointingHandCursor));
-        pushButton_2->setStyleSheet(QString::fromUtf8("border:1px solid white;\n"
-"font: 10pt \"Segoe UI\";\n"
-"background-color:white;\n"
-"color:rgb(59,81,127);"));
+        pushButton_2->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	border:1px solid white;\n"
+"	background-color:white;\n"
+"	color:rgb(59,81,127);\n"
+"	font: 10pt \"Segoe UI\";\n"
+"	background-image: url(:/area/area/edit.png);\n"
+"	background-repeat:none;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	border:1.2px solid #0090d8;\n"
+"}\n"
+"	"));
+        label = new QLabel(areadegestao);
+        label->setObjectName("label");
+        label->setGeometry(QRect(490, 260, 121, 141));
+        label->setStyleSheet(QString::fromUtf8("QLabel{\n"
+"	background-image: url(:/area/area/camba.png);\n"
+"	background-repeat:none;\n"
+"}\n"
+"QLabel:hover{\n"
+"	background-image: url(:/area/area/cambaM.png);\n"
+"}"));
+        label_2 = new QLabel(areadegestao);
+        label_2->setObjectName("label_2");
+        label_2->setGeometry(QRect(450, 200, 71, 61));
+        label_2->setStyleSheet(QString::fromUtf8("background-image: url(:/area/area/ola.png);\n"
+"background-repeat:none;"));
 
         retranslateUi(areadegestao);
 
@@ -143,11 +190,13 @@ public:
         areadegestao->setWindowTitle(QCoreApplication::translate("areadegestao", "Dialog", nullptr));
         label_4->setText(QCoreApplication::translate("areadegestao", "CASH", nullptr));
         label_3->setText(QCoreApplication::translate("areadegestao", "C", nullptr));
-        label_5->setText(QCoreApplication::translate("areadegestao", "BENVINDO AO CAMBA", nullptr));
+        label_5->setText(QCoreApplication::translate("areadegestao", " CAMBA BENVINDO", nullptr));
         pushButton_4->setText(QCoreApplication::translate("areadegestao", "BAZAR", nullptr));
         pushButton_3->setText(QCoreApplication::translate("areadegestao", "RELAT\303\223RIO", nullptr));
         pushButton->setText(QCoreApplication::translate("areadegestao", "CASH", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("areadegestao", "VIEW E EDITAR CONTA", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("areadegestao", "    EDITAR CONTA", nullptr));
+        label->setText(QString());
+        label_2->setText(QCoreApplication::translate("areadegestao", "l", nullptr));
     } // retranslateUi
 
 };

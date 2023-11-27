@@ -1,6 +1,7 @@
 #include "areadegestao.h"
 #include "ui_areadegestao.h"
 #include "areacash.h"
+#include "areaconta.h"
 
 areadegestao::areadegestao(QWidget *parent) :
     QDialog(parent),
@@ -18,6 +19,14 @@ void areadegestao::on_pushButton_clicked()
 {
     areacash *form3 = new areacash;
     form3->show();
+    hide();
+}
+
+
+void areadegestao::on_pushButton_2_clicked()
+{
+    areaconta *form4 = new areaconta;
+    form4->show();
     hide();
 }
 

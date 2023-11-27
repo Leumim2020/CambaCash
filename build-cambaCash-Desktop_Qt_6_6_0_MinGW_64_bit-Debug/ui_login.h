@@ -53,11 +53,18 @@ public:
         font.setItalic(false);
         btnentrar->setFont(font);
         btnentrar->setCursor(QCursor(Qt::PointingHandCursor));
-        btnentrar->setMouseTracking(false);
-        btnentrar->setStyleSheet(QString::fromUtf8("background-color:white;\n"
-"font: 10pt \"Segoe UI\";\n"
-"border: 1px solid white;\n"
-"color:rgb(59,81,127);"));
+        btnentrar->setMouseTracking(true);
+        btnentrar->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	background-color:white;\n"
+"	background-image: url(:/area/area/in.png);\n"
+"	background-repeat:none;\n"
+"	font: 10pt \"Segoe UI\";\n"
+"	border: 1px solid white;\n"
+"	color:rgb(59,81,127);\n"
+"}\n"
+"QPushButton:hover{\n"
+"	border:1.2px solid #0090d8;\n"
+"}"));
         label_3 = new QLabel(centralwidget);
         label_3->setObjectName("label_3");
         label_3->setGeometry(QRect(90, 40, 41, 61));
@@ -88,11 +95,13 @@ public:
         login->setCentralWidget(centralwidget);
         menubar = new QMenuBar(login);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 290, 21));
+        menubar->setGeometry(QRect(0, 0, 290, 22));
         login->setMenuBar(menubar);
         statusbar = new QStatusBar(login);
         statusbar->setObjectName("statusbar");
         login->setStatusBar(statusbar);
+        QWidget::setTabOrder(line_user, line_pass);
+        QWidget::setTabOrder(line_pass, btnentrar);
 
         retranslateUi(login);
 

@@ -106,9 +106,9 @@ color: rgb(208, 208, 208);</string>
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>300</y>
-     <width>281</width>
+     <x>520</x>
+     <y>210</y>
+     <width>241</width>
      <height>31</height>
     </rect>
    </property>
@@ -128,7 +128,7 @@ color: rgb(208, 208, 208);</string>
 font: 20pt &quot;Segoe UI&quot;;</string>
    </property>
    <property name="text">
-    <string>BENVINDO AO CAMBA</string>
+    <string> CAMBA BENVINDO</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_4">
@@ -164,10 +164,17 @@ font: 20pt &quot;Segoe UI&quot;;</string>
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:1px solid white;
-font: 10pt &quot;Segoe UI&quot;;
-background-color:white;
-color:rgb(59,81,127);</string>
+    <string notr="true">QPushButton{
+	border:1px solid white;
+	background-color:white;
+	background-image: url(:/area/area/back.png);
+	background-repeat:none;
+	color:rgb(59,81,127);
+	font: 10pt &quot;Segoe UI&quot;;
+}
+QPushButton:hover{
+	border:1px solid #0090d8;
+}</string>
    </property>
    <property name="text">
     <string>BAZAR</string>
@@ -206,10 +213,17 @@ color:rgb(59,81,127);</string>
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:1px solid white;
-font: 10pt &quot;Segoe UI&quot;;
-background-color:white;
-color:rgb(59,81,127);</string>
+    <string notr="true">QPushButton{	
+	border:1px solid white;
+	background-color:white;
+	background-repeat:none;
+	background-image: url(:/area/area/relatorio.png);
+	color:rgb(59,81,127);
+	font: 10pt &quot;Segoe UI&quot;;
+}
+QPushButton:hover{
+	border:1px solid #0090d8;
+}</string>
    </property>
    <property name="text">
     <string>RELATÓRIO</string>
@@ -232,8 +246,8 @@ color:rgb(59,81,127);</string>
    </property>
    <property name="maximumSize">
     <size>
-     <width>0</width>
-     <height>16777215</height>
+     <width>170</width>
+     <height>35</height>
     </size>
    </property>
    <property name="font">
@@ -248,10 +262,18 @@ color:rgb(59,81,127);</string>
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:1px solid white;
-font: 10pt &quot;Segoe UI&quot;;
-background-color:white;
-color:rgb(59,81,127);</string>
+    <string notr="true">QPushButton{
+	border:1px solid white;
+	background-color:white;
+	background-image: url(:/area/area/cash.png);
+	background-repeat:none;
+	color:rgb(59,81,127);
+	font: 10pt &quot;Segoe UI&quot;;
+}
+QPushButton:hover{
+	border:1.2px solid #0090d8;
+}
+</string>
    </property>
    <property name="text">
     <string>CASH</string>
@@ -274,8 +296,8 @@ color:rgb(59,81,127);</string>
    </property>
    <property name="maximumSize">
     <size>
-     <width>0</width>
-     <height>16777215</height>
+     <width>170</width>
+     <height>35</height>
     </size>
    </property>
    <property name="font">
@@ -290,13 +312,60 @@ color:rgb(59,81,127);</string>
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:1px solid white;
-font: 10pt &quot;Segoe UI&quot;;
-background-color:white;
-color:rgb(59,81,127);</string>
+    <string notr="true">QPushButton{
+	border:1px solid white;
+	background-color:white;
+	color:rgb(59,81,127);
+	font: 10pt &quot;Segoe UI&quot;;
+	background-image: url(:/area/area/edit.png);
+	background-repeat:none;
+}
+QPushButton:hover{
+	border:1.2px solid #0090d8;
+}
+	</string>
    </property>
    <property name="text">
-    <string>VIEW E EDITAR CONTA</string>
+    <string>    EDITAR CONTA</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>260</y>
+     <width>121</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+	background-image: url(:/area/area/camba.png);
+	background-repeat:none;
+}
+QLabel:hover{
+	background-image: url(:/area/area/cambaM.png);
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>200</y>
+     <width>71</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/area/area/ola.png);
+background-repeat:none;</string>
+   </property>
+   <property name="text">
+    <string>l</string>
    </property>
   </widget>
  </widget>

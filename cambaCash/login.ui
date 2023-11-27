@@ -50,13 +50,20 @@
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="mouseTracking">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:white;
-font: 10pt &quot;Segoe UI&quot;;
-border: 1px solid white;
-color:rgb(59,81,127);</string>
+     <string notr="true">QPushButton{
+	background-color:white;
+	background-image: url(:/area/area/in.png);
+	background-repeat:none;
+	font: 10pt &quot;Segoe UI&quot;;
+	border: 1px solid white;
+	color:rgb(59,81,127);
+}
+QPushButton:hover{
+	border:1.2px solid #0090d8;
+}</string>
     </property>
     <property name="text">
      <string>MBORA</string>
@@ -168,12 +175,17 @@ color: rgb(255, 212, 38);</string>
      <x>0</x>
      <y>0</y>
      <width>290</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
+ <tabstops>
+  <tabstop>line_user</tabstop>
+  <tabstop>line_pass</tabstop>
+  <tabstop>btnentrar</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

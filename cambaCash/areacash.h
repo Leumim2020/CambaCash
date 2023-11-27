@@ -2,6 +2,9 @@
 #define AREACASH_H
 
 #include <QDialog>
+#include <QSqlDatabase>
+#include <QSqlQuery>
+#include <QtSql>
 
 namespace Ui {
 class areacash;
@@ -22,6 +25,8 @@ private slots:
 
 private:
     Ui::areacash *ui;
+    QSqlDatabase db_connect;
+    QString timeH,timeM,timeHM;
 };
 
 #endif // AREACASH_H

@@ -1,0 +1,10 @@
+release/areacash.o
+release/areaconta.o
+release/areadegestao.o
+release/main.o
+release/login.o
+release/qrc_image.o
+release/moc_areacash.o
+release/moc_areaconta.o
+release/moc_areadegestao.o
+release/moc_login.o

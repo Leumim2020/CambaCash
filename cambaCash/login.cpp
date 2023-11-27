@@ -58,6 +58,7 @@ void login::on_btnentrar_clicked()
                 if(query.value("password").toString() == ui->line_pass->text()){
                     areadegestao *form2 = new areadegestao;
                     form2->show();
+                    db_connect.close();
                     close();
                     ui->line_user->clear();
                     ui->line_pass->clear();
