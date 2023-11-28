@@ -10,8 +10,10 @@
 #define UI_AREACONTA_H
 
 #include <QtCore/QDate>
+#include <QtCore/QLocale>
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QDateEdit>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QFrame>
@@ -42,18 +44,23 @@ public:
     QDateEdit *dateEdit_Delete;
     QLabel *label_9;
     QLabel *label_10;
+    QComboBox *comboBox;
+    QLabel *label_11;
+    QLabel *label_12;
 
     void setupUi(QDialog *areaconta)
     {
         if (areaconta->objectName().isEmpty())
             areaconta->setObjectName("areaconta");
-        areaconta->resize(940, 760);
-        areaconta->setMinimumSize(QSize(940, 760));
-        areaconta->setMaximumSize(QSize(940, 760));
-        areaconta->setStyleSheet(QString::fromUtf8("background-color:rgb(59, 81, 127);"));
+        areaconta->resize(940, 800);
+        areaconta->setMinimumSize(QSize(940, 800));
+        areaconta->setMaximumSize(QSize(940, 800));
+        areaconta->setStyleSheet(QString::fromUtf8("QDialog{\n"
+"	background-color:rgb(59, 81, 127);\n"
+"}"));
         line = new QFrame(areaconta);
         line->setObjectName("line");
-        line->setGeometry(QRect(240, 0, 10, 761));
+        line->setGeometry(QRect(240, 0, 10, 801));
         line->setMinimumSize(QSize(10, 0));
         line->setMaximumSize(QSize(10, 16777215));
         line->setStyleSheet(QString::fromUtf8("background-color:white;\n"
@@ -62,7 +69,7 @@ public:
         line->setFrameShadow(QFrame::Sunken);
         pushButton = new QPushButton(areaconta);
         pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(70, 210, 100, 30));
+        pushButton->setGeometry(QRect(70, 240, 100, 30));
         pushButton->setMinimumSize(QSize(100, 30));
         pushButton->setMaximumSize(QSize(100, 30));
         QFont font;
@@ -98,34 +105,38 @@ public:
 ""));
         label_8 = new QLabel(areaconta);
         label_8->setObjectName("label_8");
-        label_8->setGeometry(QRect(270, 200, 181, 31));
+        label_8->setGeometry(QRect(270, 240, 181, 31));
         label_8->setCursor(QCursor(Qt::ArrowCursor));
         label_8->setStyleSheet(QString::fromUtf8("font: 13pt \"Segoe UI \";\n"
 "color: rgb(185, 185, 185);\n"
 ""));
         label_2 = new QLabel(areaconta);
         label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(460, 200, 31, 31));
+        label_2->setGeometry(QRect(460, 240, 31, 31));
         label_2->setStyleSheet(QString::fromUtf8("background-image: url(:/area/area/relatorio.png);\n"
 "background-repeat:none;"));
         dateEdit = new QDateEdit(areaconta);
         dateEdit->setObjectName("dateEdit");
         dateEdit->setEnabled(true);
-        dateEdit->setGeometry(QRect(680, 200, 150, 30));
+        dateEdit->setGeometry(QRect(520, 240, 150, 30));
         dateEdit->setMinimumSize(QSize(150, 30));
         dateEdit->setMaximumSize(QSize(150, 30));
         dateEdit->setStyleSheet(QString::fromUtf8("border:none;\n"
-"background-color:white;\n"
+"background-color: white;\n"
+"color:rgb(59, 81, 127);\n"
 "font: 10pt \"Segoe UI\";\n"
 "\n"
 ""));
+        dateEdit->setLocale(QLocale(QLocale::Portuguese, QLocale::Portugal));
         dateEdit->setReadOnly(false);
         dateEdit->setCorrectionMode(QAbstractSpinBox::CorrectToPreviousValue);
         dateEdit->setProperty("showGroupSeparator", QVariant(false));
+        dateEdit->setCalendarPopup(true);
+        dateEdit->setTimeSpec(Qt::UTC);
         dateEdit->setDate(QDate(2023, 11, 23));
         pushButton_2 = new QPushButton(areaconta);
         pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(830, 200, 80, 30));
+        pushButton_2->setGeometry(QRect(840, 240, 80, 30));
         pushButton_2->setMinimumSize(QSize(80, 30));
         pushButton_2->setMaximumSize(QSize(80, 30));
         pushButton_2->setCursor(QCursor(Qt::PointingHandCursor));
@@ -155,7 +166,7 @@ public:
         tableWidget->setHorizontalHeaderItem(5, __qtablewidgetitem5);
         tableWidget->setObjectName("tableWidget");
         tableWidget->setEnabled(true);
-        tableWidget->setGeometry(QRect(270, 250, 651, 351));
+        tableWidget->setGeometry(QRect(270, 290, 651, 351));
         tableWidget->setMinimumSize(QSize(651, 351));
         tableWidget->setMaximumSize(QSize(651, 351));
         QFont font1;
@@ -180,7 +191,7 @@ public:
         tableWidget->verticalHeader()->setProperty("showSortIndicator", QVariant(false));
         pushButton_edit = new QPushButton(areaconta);
         pushButton_edit->setObjectName("pushButton_edit");
-        pushButton_edit->setGeometry(QRect(380, 650, 100, 30));
+        pushButton_edit->setGeometry(QRect(380, 690, 100, 30));
         pushButton_edit->setMinimumSize(QSize(100, 30));
         pushButton_edit->setMaximumSize(QSize(100, 30));
         pushButton_edit->setFont(font);
@@ -197,7 +208,7 @@ public:
 "}"));
         pushButton_delete = new QPushButton(areaconta);
         pushButton_delete->setObjectName("pushButton_delete");
-        pushButton_delete->setGeometry(QRect(380, 720, 100, 30));
+        pushButton_delete->setGeometry(QRect(380, 760, 100, 30));
         pushButton_delete->setMinimumSize(QSize(100, 30));
         pushButton_delete->setMaximumSize(QSize(100, 30));
         pushButton_delete->setFont(font);
@@ -214,7 +225,7 @@ public:
 "}"));
         pushButton_relatory_pdf = new QPushButton(areaconta);
         pushButton_relatory_pdf->setObjectName("pushButton_relatory_pdf");
-        pushButton_relatory_pdf->setGeometry(QRect(820, 620, 100, 30));
+        pushButton_relatory_pdf->setGeometry(QRect(810, 660, 100, 30));
         pushButton_relatory_pdf->setMinimumSize(QSize(100, 30));
         pushButton_relatory_pdf->setMaximumSize(QSize(100, 30));
         pushButton_relatory_pdf->setFont(font);
@@ -231,7 +242,7 @@ public:
 "}"));
         lineEdit_Delete = new QLineEdit(areaconta);
         lineEdit_Delete->setObjectName("lineEdit_Delete");
-        lineEdit_Delete->setGeometry(QRect(270, 650, 100, 30));
+        lineEdit_Delete->setGeometry(QRect(270, 690, 100, 30));
         lineEdit_Delete->setMinimumSize(QSize(100, 30));
         lineEdit_Delete->setMaximumSize(QSize(100, 30));
         lineEdit_Delete->setStyleSheet(QString::fromUtf8("QLineEdit{\n"
@@ -242,30 +253,70 @@ public:
         dateEdit_Delete = new QDateEdit(areaconta);
         dateEdit_Delete->setObjectName("dateEdit_Delete");
         dateEdit_Delete->setEnabled(true);
-        dateEdit_Delete->setGeometry(QRect(270, 720, 100, 30));
+        dateEdit_Delete->setGeometry(QRect(270, 760, 100, 30));
         dateEdit_Delete->setMinimumSize(QSize(100, 30));
         dateEdit_Delete->setMaximumSize(QSize(100, 30));
         dateEdit_Delete->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color:white;\n"
+"color:rgb(59, 81, 127);\n"
 "font: 10pt \"Segoe UI\";\n"
 "\n"
 ""));
         dateEdit_Delete->setReadOnly(false);
         dateEdit_Delete->setCorrectionMode(QAbstractSpinBox::CorrectToPreviousValue);
         dateEdit_Delete->setProperty("showGroupSeparator", QVariant(false));
+        dateEdit_Delete->setCalendarPopup(true);
+        dateEdit_Delete->setTimeSpec(Qt::UTC);
         dateEdit_Delete->setDate(QDate(2023, 11, 23));
         label_9 = new QLabel(areaconta);
         label_9->setObjectName("label_9");
-        label_9->setGeometry(QRect(270, 690, 211, 21));
+        label_9->setGeometry(QRect(270, 730, 211, 21));
         label_9->setCursor(QCursor(Qt::ArrowCursor));
         label_9->setStyleSheet(QString::fromUtf8("font: 9pt \"Segoe UI \";\n"
 "color: rgb(185, 185, 185);\n"
 ""));
         label_10 = new QLabel(areaconta);
         label_10->setObjectName("label_10");
-        label_10->setGeometry(QRect(270, 620, 231, 21));
+        label_10->setGeometry(QRect(270, 660, 231, 21));
         label_10->setCursor(QCursor(Qt::ArrowCursor));
         label_10->setStyleSheet(QString::fromUtf8("font: 9pt \"Segoe UI \";\n"
+"color: rgb(185, 185, 185);\n"
+""));
+        comboBox = new QComboBox(areaconta);
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->setObjectName("comboBox");
+        comboBox->setGeometry(QRect(680, 240, 150, 30));
+        comboBox->setMinimumSize(QSize(150, 30));
+        comboBox->setMaximumSize(QSize(150, 30));
+        comboBox->setStyleSheet(QString::fromUtf8("QComboBox{\n"
+"	background-color:white;\n"
+"	border:none;\n"
+"	color: rgb(59, 81, 127);\n"
+"}"));
+        label_11 = new QLabel(areaconta);
+        label_11->setObjectName("label_11");
+        label_11->setGeometry(QRect(680, 210, 31, 21));
+        label_11->setCursor(QCursor(Qt::ArrowCursor));
+        label_11->setStyleSheet(QString::fromUtf8("font: 9pt \"Segoe UI \";\n"
+"color: rgb(185, 185, 185);\n"
+""));
+        label_12 = new QLabel(areaconta);
+        label_12->setObjectName("label_12");
+        label_12->setGeometry(QRect(520, 210, 41, 21));
+        label_12->setCursor(QCursor(Qt::ArrowCursor));
+        label_12->setStyleSheet(QString::fromUtf8("font: 9pt \"Segoe UI \";\n"
 "color: rgb(185, 185, 185);\n"
 ""));
         QWidget::setTabOrder(dateEdit, pushButton_2);
@@ -301,10 +352,26 @@ public:
         pushButton_edit->setText(QCoreApplication::translate("areaconta", "EDITAR", nullptr));
         pushButton_delete->setText(QCoreApplication::translate("areaconta", "DELETAR", nullptr));
         pushButton_relatory_pdf->setText(QCoreApplication::translate("areaconta", "RELAT\303\223RIO", nullptr));
-        lineEdit_Delete->setPlaceholderText(QCoreApplication::translate("areaconta", "conta\302\272", nullptr));
+        lineEdit_Delete->setPlaceholderText(QCoreApplication::translate("areaconta", "N\302\272", nullptr));
         dateEdit_Delete->setDisplayFormat(QCoreApplication::translate("areaconta", "dd/MM/yyyy", nullptr));
         label_9->setText(QCoreApplication::translate("areaconta", "SELECIONE DATA E D/E N* CONTAS", nullptr));
-        label_10->setText(QCoreApplication::translate("areaconta", "DIGITE N\302\272 DE CONTA E D/E N^1 CONTA", nullptr));
+        label_10->setText(QCoreApplication::translate("areaconta", "DIGITE CONTA E D/E N^1 CONTA", nullptr));
+        comboBox->setItemText(0, QString());
+        comboBox->setItemText(1, QCoreApplication::translate("areaconta", "Janeiro", nullptr));
+        comboBox->setItemText(2, QCoreApplication::translate("areaconta", "Fevereiro", nullptr));
+        comboBox->setItemText(3, QCoreApplication::translate("areaconta", "Mar\303\247o", nullptr));
+        comboBox->setItemText(4, QCoreApplication::translate("areaconta", "Abril", nullptr));
+        comboBox->setItemText(5, QCoreApplication::translate("areaconta", "Maio", nullptr));
+        comboBox->setItemText(6, QCoreApplication::translate("areaconta", "Junho", nullptr));
+        comboBox->setItemText(7, QCoreApplication::translate("areaconta", "Julho", nullptr));
+        comboBox->setItemText(8, QCoreApplication::translate("areaconta", "Agosto", nullptr));
+        comboBox->setItemText(9, QCoreApplication::translate("areaconta", "Setembro", nullptr));
+        comboBox->setItemText(10, QCoreApplication::translate("areaconta", "Outubro", nullptr));
+        comboBox->setItemText(11, QCoreApplication::translate("areaconta", "Novembro", nullptr));
+        comboBox->setItemText(12, QCoreApplication::translate("areaconta", "Dezembro", nullptr));
+
+        label_11->setText(QCoreApplication::translate("areaconta", "M\303\212S", nullptr));
+        label_12->setText(QCoreApplication::translate("areaconta", "DATA", nullptr));
     } // retranslateUi
 
 };

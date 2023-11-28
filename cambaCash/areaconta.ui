@@ -7,26 +7,28 @@
     <x>0</x>
     <y>0</y>
     <width>940</width>
-    <height>760</height>
+    <height>800</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>940</width>
-    <height>760</height>
+    <height>800</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>940</width>
-    <height>760</height>
+    <height>800</height>
    </size>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:rgb(59, 81, 127);</string>
+   <string notr="true">QDialog{
+	background-color:rgb(59, 81, 127);
+}</string>
   </property>
   <widget class="Line" name="line">
    <property name="geometry">
@@ -34,7 +36,7 @@
      <x>240</x>
      <y>0</y>
      <width>10</width>
-     <height>761</height>
+     <height>801</height>
     </rect>
    </property>
    <property name="minimumSize">
@@ -61,7 +63,7 @@ border:none;</string>
    <property name="geometry">
     <rect>
      <x>70</x>
-     <y>210</y>
+     <y>240</y>
      <width>100</width>
      <height>30</height>
     </rect>
@@ -151,7 +153,7 @@ color: rgb(185, 185, 185);
    <property name="geometry">
     <rect>
      <x>270</x>
-     <y>200</y>
+     <y>240</y>
      <width>181</width>
      <height>31</height>
     </rect>
@@ -172,7 +174,7 @@ color: rgb(185, 185, 185);
    <property name="geometry">
     <rect>
      <x>460</x>
-     <y>200</y>
+     <y>240</y>
      <width>31</width>
      <height>31</height>
     </rect>
@@ -191,8 +193,8 @@ background-repeat:none;</string>
    </property>
    <property name="geometry">
     <rect>
-     <x>680</x>
-     <y>200</y>
+     <x>520</x>
+     <y>240</y>
      <width>150</width>
      <height>30</height>
     </rect>
@@ -211,10 +213,14 @@ background-repeat:none;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border:none;
-background-color:white;
+background-color: white;
+color:rgb(59, 81, 127);
 font: 10pt &quot;Segoe UI&quot;;
 
 </string>
+   </property>
+   <property name="locale">
+    <locale language="Portuguese" country="Portugal"/>
    </property>
    <property name="readOnly">
     <bool>false</bool>
@@ -228,6 +234,12 @@ font: 10pt &quot;Segoe UI&quot;;
    <property name="displayFormat">
     <string>dd/MM/yyyy</string>
    </property>
+   <property name="calendarPopup">
+    <bool>true</bool>
+   </property>
+   <property name="timeSpec">
+    <enum>Qt::UTC</enum>
+   </property>
    <property name="date">
     <date>
      <year>2023</year>
@@ -239,8 +251,8 @@ font: 10pt &quot;Segoe UI&quot;;
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>830</x>
-     <y>200</y>
+     <x>840</x>
+     <y>240</y>
      <width>80</width>
      <height>30</height>
     </rect>
@@ -282,7 +294,7 @@ QPushButton:hover{
    <property name="geometry">
     <rect>
      <x>270</x>
-     <y>250</y>
+     <y>290</y>
      <width>651</width>
      <height>351</height>
     </rect>
@@ -382,7 +394,7 @@ QPushButton:hover{
    <property name="geometry">
     <rect>
      <x>380</x>
-     <y>650</y>
+     <y>690</y>
      <width>100</width>
      <height>30</height>
     </rect>
@@ -430,7 +442,7 @@ QPushButton:hover{
    <property name="geometry">
     <rect>
      <x>380</x>
-     <y>720</y>
+     <y>760</y>
      <width>100</width>
      <height>30</height>
     </rect>
@@ -477,8 +489,8 @@ QPushButton:hover{
   <widget class="QPushButton" name="pushButton_relatory_pdf">
    <property name="geometry">
     <rect>
-     <x>820</x>
-     <y>620</y>
+     <x>810</x>
+     <y>660</y>
      <width>100</width>
      <height>30</height>
     </rect>
@@ -526,7 +538,7 @@ QPushButton:hover{
    <property name="geometry">
     <rect>
      <x>270</x>
-     <y>650</y>
+     <y>690</y>
      <width>100</width>
      <height>30</height>
     </rect>
@@ -553,7 +565,7 @@ QPushButton:hover{
     <number>10</number>
    </property>
    <property name="placeholderText">
-    <string>contaº</string>
+    <string>Nº</string>
    </property>
   </widget>
   <widget class="QDateEdit" name="dateEdit_Delete">
@@ -563,7 +575,7 @@ QPushButton:hover{
    <property name="geometry">
     <rect>
      <x>270</x>
-     <y>720</y>
+     <y>760</y>
      <width>100</width>
      <height>30</height>
     </rect>
@@ -583,6 +595,7 @@ QPushButton:hover{
    <property name="styleSheet">
     <string notr="true">border:none;
 background-color:white;
+color:rgb(59, 81, 127);
 font: 10pt &quot;Segoe UI&quot;;
 
 </string>
@@ -599,6 +612,12 @@ font: 10pt &quot;Segoe UI&quot;;
    <property name="displayFormat">
     <string>dd/MM/yyyy</string>
    </property>
+   <property name="calendarPopup">
+    <bool>true</bool>
+   </property>
+   <property name="timeSpec">
+    <enum>Qt::UTC</enum>
+   </property>
    <property name="date">
     <date>
      <year>2023</year>
@@ -611,7 +630,7 @@ font: 10pt &quot;Segoe UI&quot;;
    <property name="geometry">
     <rect>
      <x>270</x>
-     <y>690</y>
+     <y>730</y>
      <width>211</width>
      <height>21</height>
     </rect>
@@ -632,7 +651,7 @@ color: rgb(185, 185, 185);
    <property name="geometry">
     <rect>
      <x>270</x>
-     <y>620</y>
+     <y>660</y>
      <width>231</width>
      <height>21</height>
     </rect>
@@ -646,7 +665,143 @@ color: rgb(185, 185, 185);
 </string>
    </property>
    <property name="text">
-    <string>DIGITE Nº DE CONTA E D/E N^1 CONTA</string>
+    <string>DIGITE CONTA E D/E N^1 CONTA</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>240</y>
+     <width>150</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>150</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>150</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QComboBox{
+	background-color:white;
+	border:none;
+	color: rgb(59, 81, 127);
+}</string>
+   </property>
+   <item>
+    <property name="text">
+     <string/>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Janeiro</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Fevereiro</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Março</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Abril</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Maio</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Junho</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Julho</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Agosto</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Setembro</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Outubro</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Novembro</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Dezembro</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_11">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>210</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 9pt &quot;Segoe UI &quot;;
+color: rgb(185, 185, 185);
+</string>
+   </property>
+   <property name="text">
+    <string>MÊS</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_12">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>210</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 9pt &quot;Segoe UI &quot;;
+color: rgb(185, 185, 185);
+</string>
+   </property>
+   <property name="text">
+    <string>DATA</string>
    </property>
   </widget>
  </widget>

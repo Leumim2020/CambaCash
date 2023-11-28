@@ -77,7 +77,7 @@ void areaconta::on_pushButton_delete_clicked()
     if(db_connect.isOpen()){
 
         QSqlQuery queryD;
-        queryD.prepare("DELETE * FROM contas WHERE data LIKE :date");
+        queryD.prepare("DELETE FROM contas WHERE data LIKE :date");
         queryD.bindValue(":date",ui->dateEdit_Delete->date().toString());
 
         QMessageBox::StandardButton answer = QMessageBox::question(this,"Informação","Tem certeza que deseja apagar esta(s) conta(s) permanente mente",QMessageBox::Yes|QMessageBox::No);

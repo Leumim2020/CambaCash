@@ -23,7 +23,6 @@ private slots:
     void on_pushButton_clicked();
     void on_pushButton_conta_2_clicked();
 
-
 private:
     Ui::areacash *ui;
     QSqlDatabase db_connect;
