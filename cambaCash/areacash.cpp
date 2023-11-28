@@ -88,9 +88,9 @@ void areacash::on_pushButton_conta_2_clicked()
             if(QMessageBox::Yes == answer){
 
                 QSqlQuery queryR,queryS;
-                double totalPrevious,totalCurrent;
+                double totalPrevious{},totalCurrent{};
 
-                queryS.prepare("SELECT SUM(total) AS mtotal FROM contas WHERE area LIKE :area");
+                queryS.prepare("SELECT SUM(dinheiro) mtotal FROM contas WHERE area LIKE :area");
                 queryS.bindValue(":area",ui->boxarea->currentText());
                 queryS.exec();
 

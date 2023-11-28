@@ -6,20 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>950</width>
-    <height>640</height>
+    <width>940</width>
+    <height>760</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>950</width>
-    <height>640</height>
+    <width>940</width>
+    <height>760</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>950</width>
-    <height>640</height>
+    <width>940</width>
+    <height>760</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -34,7 +34,7 @@
      <x>240</x>
      <y>0</y>
      <width>10</width>
-     <height>639</height>
+     <height>761</height>
     </rect>
    </property>
    <property name="minimumSize">
@@ -61,7 +61,7 @@ border:none;</string>
    <property name="geometry">
     <rect>
      <x>70</x>
-     <y>220</y>
+     <y>210</y>
      <width>100</width>
      <height>30</height>
     </rect>
@@ -109,8 +109,8 @@ QPushButton:hover{
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>110</y>
+     <x>100</x>
+     <y>90</y>
      <width>61</width>
      <height>31</height>
     </rect>
@@ -129,8 +129,8 @@ color: rgb(255, 212, 38);</string>
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>90</y>
+     <x>60</x>
+     <y>70</y>
      <width>41</width>
      <height>61</height>
     </rect>
@@ -150,8 +150,8 @@ color: rgb(185, 185, 185);
   <widget class="QLabel" name="label_8">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>220</y>
+     <x>270</x>
+     <y>200</y>
      <width>181</width>
      <height>31</height>
     </rect>
@@ -171,8 +171,8 @@ color: rgb(185, 185, 185);
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>470</x>
-     <y>220</y>
+     <x>460</x>
+     <y>200</y>
      <width>31</width>
      <height>31</height>
     </rect>
@@ -191,8 +191,8 @@ background-repeat:none;</string>
    </property>
    <property name="geometry">
     <rect>
-     <x>700</x>
-     <y>180</y>
+     <x>680</x>
+     <y>200</y>
      <width>150</width>
      <height>30</height>
     </rect>
@@ -239,8 +239,8 @@ font: 10pt &quot;Segoe UI&quot;;
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>850</x>
-     <y>180</y>
+     <x>830</x>
+     <y>200</y>
      <width>80</width>
      <height>30</height>
     </rect>
@@ -275,34 +275,379 @@ QPushButton:hover{
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_date">
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>600</y>
-     <width>251</width>
+     <x>270</x>
+     <y>250</y>
+     <width>651</width>
+     <height>351</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>651</width>
+     <height>351</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>651</width>
+     <height>351</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="cursor" stdset="0">
+    <cursorShape>ForbiddenCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTableWidget{
+	background-color: rgb(255, 255, 255);
+	color:rgb(59, 81, 127);
+}</string>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOn</enum>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOn</enum>
+   </property>
+   <property name="sizeAdjustPolicy">
+    <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
+   </property>
+   <property name="autoScroll">
+    <bool>true</bool>
+   </property>
+   <property name="gridStyle">
+    <enum>Qt::SolidLine</enum>
+   </property>
+   <attribute name="horizontalHeaderCascadingSectionResizes">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="horizontalHeaderMinimumSectionSize">
+    <number>36</number>
+   </attribute>
+   <attribute name="horizontalHeaderDefaultSectionSize">
+    <number>106</number>
+   </attribute>
+   <attribute name="verticalHeaderVisible">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="verticalHeaderDefaultSectionSize">
+    <number>36</number>
+   </attribute>
+   <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+    <bool>false</bool>
+   </attribute>
+   <column>
+    <property name="text">
+     <string>Contaº</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Área</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Dinheiro-IN (AOA)</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Data</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Hora</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Total (AOA)</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QPushButton" name="pushButton_edit">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>650</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>100</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>100</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <pointsize>10</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	border:1px solid white;
+	background-repeat:none;
+	font: 10pt &quot;Segoe UI&quot;;
+	background-color:white;
+	color:rgb(59,81,127);
+}
+QPushButton:hover{
+	border:1px solid #0090d8;
+}</string>
+   </property>
+   <property name="text">
+    <string>EDITAR</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_delete">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>720</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>100</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>100</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <pointsize>10</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	border:1px solid white;
+	background-repeat:none;
+	font: 10pt &quot;Segoe UI&quot;;
+	background-color:white;
+	color:rgb(59,81,127);
+}
+QPushButton:hover{
+	border:1px solid #0090d8;
+}</string>
+   </property>
+   <property name="text">
+    <string>DELETAR</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_relatory_pdf">
+   <property name="geometry">
+    <rect>
+     <x>820</x>
+     <y>620</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>100</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>100</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <pointsize>10</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	border:1px solid white;
+	background-repeat:none;
+	font: 10pt &quot;Segoe UI&quot;;
+	background-color:white;
+	color:rgb(59,81,127);
+}
+QPushButton:hover{
+	border:1px solid #0090d8;
+}</string>
+   </property>
+   <property name="text">
+    <string>RELATÓRIO</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_Delete">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>650</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>100</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>100</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+	background-color:#fff;
+	color:rgb(59,81,127);
+}</string>
+   </property>
+   <property name="maxLength">
+    <number>10</number>
+   </property>
+   <property name="placeholderText">
+    <string>contaº</string>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="dateEdit_Delete">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>720</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>100</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>100</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:none;
+background-color:white;
+font: 10pt &quot;Segoe UI&quot;;
+
+</string>
+   </property>
+   <property name="readOnly">
+    <bool>false</bool>
+   </property>
+   <property name="correctionMode">
+    <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
+   </property>
+   <property name="showGroupSeparator" stdset="0">
+    <bool>false</bool>
+   </property>
+   <property name="displayFormat">
+    <string>dd/MM/yyyy</string>
+   </property>
+   <property name="date">
+    <date>
+     <year>2023</year>
+     <month>11</month>
+     <day>23</day>
+    </date>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>690</y>
+     <width>211</width>
      <height>21</height>
     </rect>
    </property>
-   <property name="text">
-    <string>TextLabel</string>
-   </property>
-  </widget>
-  <widget class="QTableView" name="tableView">
-   <property name="geometry">
-    <rect>
-     <x>260</x>
-     <y>260</y>
-     <width>671</width>
-     <height>331</height>
-    </rect>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">font: 9pt &quot;Segoe UI &quot;;
+color: rgb(185, 185, 185);
+</string>
    </property>
-   <attribute name="horizontalHeaderStretchLastSection">
-    <bool>false</bool>
-   </attribute>
+   <property name="text">
+    <string>SELECIONE DATA E D/E N* CONTAS</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>620</y>
+     <width>231</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 9pt &quot;Segoe UI &quot;;
+color: rgb(185, 185, 185);
+</string>
+   </property>
+   <property name="text">
+    <string>DIGITE Nº DE CONTA E D/E N^1 CONTA</string>
+   </property>
   </widget>
  </widget>
  <tabstops>

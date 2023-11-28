@@ -2,6 +2,7 @@
 #define AREACASH_H
 
 #include <QDialog>
+#include <QDebug>
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include <QtSql>
