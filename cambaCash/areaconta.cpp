@@ -139,12 +139,21 @@ void areaconta::on_pushButton_delete_clicked()
         }
         if(ui->dateEdit->date().toString() == "Thu Nov 23 2023" && ui->tableWidget->currentRow()){
 
-            qDebug() << "you selected row";
-            qDebug() << ui->tableWidget->currentRow();
+            int rowselect = ui->tableWidget->currentRow(),
+                id = ui->tableWidget->item(rowselect,0)->text().toInt();
+
+            QSqlQuery queryD;
+            queryD.prepare("DELETE FROM contas WHERE id="+id);
+
+            QMessageBox::StandardButton answer = QMessageBox::question(this,"Informação","Tem certeza que deseja apagar esta(s) conta(s) permanente mente",QMessageBox::Yes|QMessageBox::No);
+            if(QMessageBox::Yes == answer){
+                queryD.exec();
+                if(queryD.next())
+                    qDebug() << "query find resgisters";
+            }
 
         }
     }
-
-
+    qDebug() << ui->tableWidget->currentRow();
 }
 
