@@ -155,26 +155,34 @@ public:
         calendar->setEnabled(false);
         calendar->setGeometry(QRect(490, 240, 371, 231));
         calendar->setCursor(QCursor(Qt::PointingHandCursor));
-        calendar->setStyleSheet(QString::fromUtf8("color:black;"));
+        calendar->setStyleSheet(QString::fromUtf8("color:black;\n"
+"font: 10pt \"Segoe UI\";"));
         calendar->setGridVisible(true);
         calendar->setSelectionMode(QCalendarWidget::SingleSelection);
         calendar->setHorizontalHeaderFormat(QCalendarWidget::ShortDayNames);
         calendar->setVerticalHeaderFormat(QCalendarWidget::NoVerticalHeader);
-        calendar->setNavigationBarVisible(false);
+        calendar->setNavigationBarVisible(true);
         calendar->setDateEditEnabled(true);
         boxarea = new QComboBox(areacash);
         boxarea->setObjectName("boxarea");
         boxarea->setGeometry(QRect(270, 310, 211, 40));
         boxarea->setMinimumSize(QSize(211, 40));
         boxarea->setMaximumSize(QSize(211, 40));
+        QFont font3;
+        font3.setFamilies({QString::fromUtf8("Segoe UI")});
+        font3.setPointSize(13);
+        font3.setBold(false);
+        font3.setItalic(false);
+        boxarea->setFont(font3);
         boxarea->setCursor(QCursor(Qt::PointingHandCursor));
         boxarea->setStyleSheet(QString::fromUtf8("border:none;\n"
-"font: 10pt \"Segoe UI\";\n"
+"font: 13pt \"Segoe UI\";\n"
 "color: rgb(255, 255, 255);\n"
 "\n"
 "\n"
 ""));
         boxarea->setEditable(false);
+        boxarea->setIconSize(QSize(20, 16));
         boxarea->setFrame(true);
         boxmoney = new QDoubleSpinBox(areacash);
         boxmoney->setObjectName("boxmoney");
@@ -203,7 +211,7 @@ public:
 ""));
         label_test = new QLabel(areacash);
         label_test->setObjectName("label_test");
-        label_test->setGeometry(QRect(270, 570, 121, 51));
+        label_test->setGeometry(QRect(270, 580, 81, 41));
         label_9 = new QLabel(areacash);
         label_9->setObjectName("label_9");
         label_9->setGeometry(QRect(270, 290, 211, 21));

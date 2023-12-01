@@ -77,7 +77,7 @@ public:
         line_user->setCursor(QCursor(Qt::IBeamCursor));
         line_user->setMouseTracking(false);
         line_user->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        line_user->setMaxLength(14);
+        line_user->setMaxLength(8);
         line_pass = new QLineEdit(centralwidget);
         line_pass->setObjectName("line_pass");
         line_pass->setGeometry(QRect(50, 190, 181, 31));
@@ -85,7 +85,7 @@ public:
         line_pass->setCursor(QCursor(Qt::IBeamCursor));
         line_pass->setMouseTracking(false);
         line_pass->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        line_pass->setMaxLength(12);
+        line_pass->setMaxLength(8);
         line_pass->setEchoMode(QLineEdit::Password);
         label_4 = new QLabel(centralwidget);
         label_4->setObjectName("label_4");
@@ -114,6 +114,7 @@ public:
         btnentrar->setText(QCoreApplication::translate("login", "MBORA", nullptr));
         label_3->setText(QCoreApplication::translate("login", "C", nullptr));
         line_user->setPlaceholderText(QCoreApplication::translate("login", "Nome do usu\303\241rio", nullptr));
+        line_pass->setText(QString());
         line_pass->setPlaceholderText(QCoreApplication::translate("login", "Senha do usu\303\241rio", nullptr));
         label_4->setText(QCoreApplication::translate("login", "CASH", nullptr));
     } // retranslateUi

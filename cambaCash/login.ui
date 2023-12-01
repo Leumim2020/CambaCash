@@ -111,7 +111,7 @@ color: rgb(208, 208, 208);</string>
      <string notr="true">background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="maxLength">
-     <number>14</number>
+     <number>8</number>
     </property>
     <property name="placeholderText">
      <string>Nome do usuário</string>
@@ -141,8 +141,11 @@ color: rgb(208, 208, 208);</string>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 255, 255);</string>
     </property>
+    <property name="text">
+     <string/>
+    </property>
     <property name="maxLength">
-     <number>12</number>
+     <number>8</number>
     </property>
     <property name="echoMode">
      <enum>QLineEdit::Password</enum>

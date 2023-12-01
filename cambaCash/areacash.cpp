@@ -1,4 +1,5 @@
 #include "areacash.h"
+#include "areaconta.h"
 #include "ui_areacash.h"
 #include "areadegestao.h"
 #include "ctime"
@@ -108,9 +109,7 @@ void areacash::on_pushButton_conta_2_clicked()
                     queryR.exec();
 
                 }else{
-
                     ui->label_test->setText("total not was found");
-
                 }
 
             }else{
@@ -120,6 +119,10 @@ void areacash::on_pushButton_conta_2_clicked()
     }
 }
 
-
-
+void areacash::on_pushButton_conta_clicked()
+{
+    areaconta formconta(this,"areaconta");
+    formconta.exec();
+    close();
+}
 

@@ -303,7 +303,8 @@ QPushButton:hover{
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:black;</string>
+    <string notr="true">color:black;
+font: 10pt &quot;Segoe UI&quot;;</string>
    </property>
    <property name="gridVisible">
     <bool>true</bool>
@@ -318,7 +319,7 @@ QPushButton:hover{
     <enum>QCalendarWidget::NoVerticalHeader</enum>
    </property>
    <property name="navigationBarVisible">
-    <bool>false</bool>
+    <bool>true</bool>
    </property>
    <property name="dateEditEnabled">
     <bool>true</bool>
@@ -345,12 +346,20 @@ QPushButton:hover{
      <height>40</height>
     </size>
    </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <pointsize>13</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
    <property name="cursor">
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
     <string notr="true">border:none;
-font: 10pt &quot;Segoe UI&quot;;
+font: 13pt &quot;Segoe UI&quot;;
 color: rgb(255, 255, 255);
 
 
@@ -358,6 +367,12 @@ color: rgb(255, 255, 255);
    </property>
    <property name="editable">
     <bool>false</bool>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>20</width>
+     <height>16</height>
+    </size>
    </property>
    <property name="placeholderText">
     <string/>
@@ -453,9 +468,9 @@ color: rgb(185, 185, 185);
    <property name="geometry">
     <rect>
      <x>270</x>
-     <y>570</y>
-     <width>121</width>
-     <height>51</height>
+     <y>580</y>
+     <width>81</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="text">

@@ -3,7 +3,7 @@
 #include "ui_areaconta.h"
 #include "QMessageBox"
 
-areaconta::areaconta(QWidget *parent) :
+areaconta::areaconta(QWidget *parent,QString areaX) :
     QDialog(parent),
     ui(new Ui::areaconta)
 {
@@ -11,6 +11,12 @@ areaconta::areaconta(QWidget *parent) :
     db_connect = QSqlDatabase::addDatabase("QSQLITE");
     db_connect.setDatabaseName("cambadb.db");
     db_connect.open();
+
+    if(areaX == "areaconta"){
+        ui->pushButton_edit->setEnabled(false);
+        ui->pushButton_delete->setEnabled(false);
+    }
+
 }
 
 areaconta::~areaconta()
@@ -30,61 +36,115 @@ void areaconta::on_pushButton_2_clicked()
 {
 
     if(db_connect.isOpen()){
+//------------------------------------------------------------------------------------------------------- searching date with date(dd/mm/yyyy)
+        if(ui->comboBox_month->currentText().isEmpty()){
 
-        QSqlQuery queryS,queryRowCount;
-        int rownumber{0},totalrow{1};
+            QSqlQuery queryS,queryRowCount;
+            int rownumber{0},totalrow{1};
 
-        queryS.prepare("SELECT * FROM contas WHERE data LIKE :date");
-        queryS.bindValue(":date",ui->dateEdit->date().toString());
-        queryS.exec();
+            queryS.prepare("SELECT * FROM contas WHERE data LIKE :date");
+            queryS.bindValue(":date",ui->dateEdit->date().toString());
 
-        queryRowCount.prepare("SELECT area FROM contas WHERE data LIKE :date");
-        queryRowCount.bindValue(":date",ui->dateEdit->date().toString());
-        queryRowCount.exec();
+            queryRowCount.prepare("SELECT area FROM contas WHERE data LIKE :date");
+            queryRowCount.bindValue(":date",ui->dateEdit->date().toString());
+            queryRowCount.exec();
 
-        if(queryRowCount.next()){
+            if(queryS.exec()){
 
-            while(queryRowCount.next()){
-                qDebug() << totalrow;
-                totalrow++;
+                while(queryRowCount.next()){
+                    qDebug() << totalrow;
+                    totalrow++;
+                }
+
+                ui->tableWidget->setRowCount(totalrow);
+
+                while(queryS.next()){
+
+                    ui->tableWidget->setItem(rownumber,0,new QTableWidgetItem(queryS.value("id").toString()));
+                    ui->tableWidget->setItem(rownumber,1,new QTableWidgetItem(queryS.value("area").toString()));
+                    ui->tableWidget->setItem(rownumber,2,new QTableWidgetItem(queryS.value("dinheiro").toString()));
+                    ui->tableWidget->setItem(rownumber,3,new QTableWidgetItem(queryS.value("data").toString()));
+                    ui->tableWidget->setItem(rownumber,4,new QTableWidgetItem(queryS.value("time").toString()));
+                    ui->tableWidget->setItem(rownumber,5,new QTableWidgetItem(queryS.value("total").toString()));
+                    ++rownumber;
+                }
+            }else{
+
+                QMessageBox::information(this,"Informação","Não foi encontrado conta(s) relacionada a data'"+ui->dateEdit->date().toString()+"'");
             }
+        }
+//-------------------------------------------------------------------------------------------------------end searching date with date(dd/mm/yyyy)
+//------------------------------------------------------------------------------------------------------- searching date with month
+        if(!ui->comboBox_month->currentText().isEmpty()){
 
-            ui->tableWidget->setRowCount(totalrow);
+            QSqlQuery queryS,queryRowCount;
+            int rownumber{0},totalrow{1};
 
-            while(queryS.next()){
+            QString month = ui->comboBox_month->currentText();
+            convert_month->cambaconvertmonth(month);
 
-                ui->tableWidget->setItem(rownumber,0,new QTableWidgetItem(queryS.value("id").toString()));
-                ui->tableWidget->setItem(rownumber,1,new QTableWidgetItem(queryS.value("area").toString()));
-                ui->tableWidget->setItem(rownumber,2,new QTableWidgetItem(queryS.value("dinheiro").toString()));
-                ui->tableWidget->setItem(rownumber,3,new QTableWidgetItem(queryS.value("data").toString()));
-                ui->tableWidget->setItem(rownumber,4,new QTableWidgetItem(queryS.value("time").toString()));
-                ui->tableWidget->setItem(rownumber,5,new QTableWidgetItem(queryS.value("total").toString()));
-                rownumber++;
+            queryS.prepare("SELECT * FROM contas WHERE data LIKE '%"+month+"%'");
+
+            queryRowCount.prepare("SELECT area FROM contas WHERE data LIKE '%"+month+"%'");
+            queryRowCount.exec();
+
+            ui->tableWidget->setRowCount(0);
+
+            if(queryS.exec()){
+
+                while(queryRowCount.next()){
+                    qDebug() << totalrow;
+                    totalrow++;
+                }
+
+                ui->tableWidget->setRowCount(totalrow);
+
+                while(queryS.next()){
+
+                    ui->tableWidget->setItem(rownumber,0,new QTableWidgetItem(queryS.value("id").toString()));
+                    ui->tableWidget->setItem(rownumber,1,new QTableWidgetItem(queryS.value("area").toString()));
+                    ui->tableWidget->setItem(rownumber,2,new QTableWidgetItem(queryS.value("dinheiro").toString()));
+                    ui->tableWidget->setItem(rownumber,3,new QTableWidgetItem(queryS.value("data").toString()));
+                    ui->tableWidget->setItem(rownumber,4,new QTableWidgetItem(queryS.value("time").toString()));
+                    ui->tableWidget->setItem(rownumber,5,new QTableWidgetItem(queryS.value("total").toString()));
+                    ++rownumber;
+                }
+
+            }else{
+                QMessageBox::information(this,"Informação","Não foi encontrado conta(s) relacionada a data'"+ui->comboBox_month->currentText()+"'");
+
             }
-
-        }else{
-
-            QMessageBox::information(this,"Informação","Não foi encontrado conta(s) relacionada a data'"+ui->dateEdit->date().toString()+"'");
 
         }
-
+//-------------------------------------------------------------------------------------------------------end searching date with month
     }
 }
 
-
 void areaconta::on_pushButton_delete_clicked()
 {
+
     if(db_connect.isOpen()){
 
-        QSqlQuery queryD;
-        queryD.prepare("DELETE FROM contas WHERE data LIKE :date");
-        queryD.bindValue(":date",ui->dateEdit_Delete->date().toString());
+        if(ui->dateEdit_Delete->date().toString() != "Thu Nov 23 2023" && !ui->tableWidget->currentRow()){
 
-        QMessageBox::StandardButton answer = QMessageBox::question(this,"Informação","Tem certeza que deseja apagar esta(s) conta(s) permanente mente",QMessageBox::Yes|QMessageBox::No);
+            QSqlQuery queryD;
+            queryD.prepare("DELETE FROM contas WHERE data LIKE :date");
+            queryD.bindValue(":date",ui->dateEdit_Delete->date().toString());
 
-        if(QMessageBox::Yes == answer){
-            queryD.exec();
+            QMessageBox::StandardButton answer = QMessageBox::question(this,"Informação","Tem certeza que deseja apagar esta(s) conta(s) permanente mente",QMessageBox::Yes|QMessageBox::No);
+            if(QMessageBox::Yes == answer){
+                queryD.exec();
+            }
+
+        }
+        if(ui->dateEdit->date().toString() == "Thu Nov 23 2023" && ui->tableWidget->currentRow()){
+
+            qDebug() << "you selected row";
+            qDebug() << ui->tableWidget->currentRow();
+
         }
     }
+
+
 }
 

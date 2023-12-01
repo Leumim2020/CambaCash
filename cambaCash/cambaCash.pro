@@ -1,4 +1,4 @@
-QT       += core gui sql
+QT       += core gui sql printsupport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -12,20 +12,25 @@ SOURCES += \
     areacash.cpp \
     areaconta.cpp \
     areadegestao.cpp \
+    cambaconvert.cpp \
     main.cpp \
-    login.cpp
+    login.cpp \
+    valiadtionedit.cpp
 
 HEADERS += \
     areacash.h \
     areaconta.h \
     areadegestao.h \
-    login.h
+    cambaconvert.h \
+    login.h \
+    valiadtionedit.h
 
 FORMS += \
     areacash.ui \
     areaconta.ui \
     areadegestao.ui \
-    login.ui
+    login.ui \
+    valiadtionedit.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

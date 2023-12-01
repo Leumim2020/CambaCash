@@ -2,6 +2,8 @@
 #include "ui_areadegestao.h"
 #include "areacash.h"
 #include "areaconta.h"
+#include "valiadtionedit.h"
+#include "QMessageBox"
 
 areadegestao::areadegestao(QWidget *parent) :
     QDialog(parent),
@@ -22,11 +24,11 @@ void areadegestao::on_pushButton_clicked()
     hide();
 }
 
-
 void areadegestao::on_pushButton_2_clicked()
 {
-    areaconta *form4 = new areaconta;
-    form4->show();
+
+    valiadtionEdit *formvalidtion = new valiadtionEdit;
+    formvalidtion->show();
     hide();
 }
 
