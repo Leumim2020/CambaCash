@@ -26,7 +26,9 @@
    <string>login</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(59, 81, 127);</string>
+   <string notr="true">QMainWindow{
+	background-color:white;
+}</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="btnentrar">
@@ -54,19 +56,22 @@
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-	background-color:white;
-	background-image: url(:/area/area/in.png);
+	background-color: rgb(72, 145, 217);
+	background-image: url(:/area/area/saida.png);
 	background-repeat:none;
 	font: 10pt &quot;Segoe UI&quot;;
 	border: 1px solid white;
-	color:rgb(59,81,127);
+	color:white;
 }
 QPushButton:hover{
-	border:1.2px solid #0090d8;
+	border:2px solid #0090d8;
 }</string>
     </property>
     <property name="text">
      <string>MBORA</string>
+    </property>
+    <property name="autoDefault">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
@@ -108,7 +113,11 @@ color: rgb(208, 208, 208);</string>
      <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">QLineEdit{
+	background-color: white;
+	border:1px solid rgb(59, 81, 127);
+	color: rgb(59,81,127);
+}</string>
     </property>
     <property name="maxLength">
      <number>8</number>
@@ -139,7 +148,11 @@ color: rgb(208, 208, 208);</string>
      <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">QLineEdit{
+	background-color: white;
+	border:1px solid rgb(59, 81, 127);
+	color: rgb(59,81,127);
+}</string>
     </property>
     <property name="text">
      <string/>

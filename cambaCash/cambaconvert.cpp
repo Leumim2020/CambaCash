@@ -38,4 +38,6 @@ cambaconvert::cambaconvertmonth(QString &month)
     if(month == "Dezembro")
         month = "Dec";
 
+    return 0;
 }
+

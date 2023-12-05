@@ -13,6 +13,7 @@ SOURCES += \
     areaconta.cpp \
     areadegestao.cpp \
     cambaconvert.cpp \
+    editaccount.cpp \
     main.cpp \
     login.cpp \
     valiadtionedit.cpp
@@ -22,6 +23,7 @@ HEADERS += \
     areaconta.h \
     areadegestao.h \
     cambaconvert.h \
+    editaccount.h \
     login.h \
     valiadtionedit.h
 
@@ -29,6 +31,7 @@ FORMS += \
     areacash.ui \
     areaconta.ui \
     areadegestao.ui \
+    editaccount.ui \
     login.ui \
     valiadtionedit.ui
 

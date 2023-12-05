@@ -15,17 +15,12 @@
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QVBoxLayout>
-#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_areadegestao
 {
 public:
-    QWidget *verticalLayoutWidget;
-    QVBoxLayout *verticalLayout;
-    QFrame *line;
     QLabel *label_4;
     QLabel *label_3;
     QLabel *label_5;
@@ -35,6 +30,7 @@ public:
     QPushButton *pushButton_2;
     QLabel *label;
     QLabel *label_2;
+    QFrame *line;
 
     void setupUi(QDialog *areadegestao)
     {
@@ -43,24 +39,10 @@ public:
         areadegestao->resize(880, 640);
         areadegestao->setMinimumSize(QSize(880, 640));
         areadegestao->setMaximumSize(QSize(880, 640));
-        areadegestao->setStyleSheet(QString::fromUtf8("background-color:rgb(59, 81, 127);"));
-        verticalLayoutWidget = new QWidget(areadegestao);
-        verticalLayoutWidget->setObjectName("verticalLayoutWidget");
-        verticalLayoutWidget->setGeometry(QRect(250, 0, 16, 641));
-        verticalLayout = new QVBoxLayout(verticalLayoutWidget);
-        verticalLayout->setObjectName("verticalLayout");
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
-        line = new QFrame(verticalLayoutWidget);
-        line->setObjectName("line");
-        line->setMinimumSize(QSize(10, 0));
-        line->setMaximumSize(QSize(10, 16777215));
-        line->setStyleSheet(QString::fromUtf8("background-color:white;\n"
-"border:none;"));
-        line->setFrameShape(QFrame::VLine);
-        line->setFrameShadow(QFrame::Sunken);
-
-        verticalLayout->addWidget(line);
-
+        areadegestao->setAutoFillBackground(false);
+        areadegestao->setStyleSheet(QString::fromUtf8("QDialog {\n"
+"	background-color:rgb(255,255,255);\n"
+"}"));
         label_4 = new QLabel(areadegestao);
         label_4->setObjectName("label_4");
         label_4->setGeometry(QRect(110, 110, 61, 31));
@@ -99,14 +81,14 @@ public:
         pushButton_4->setCursor(QCursor(Qt::PointingHandCursor));
         pushButton_4->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	border:1px solid white;\n"
-"	background-color:white;\n"
-"	background-image: url(:/area/area/back.png);\n"
+"	background-color: rgb(72, 145, 217);\n"
+"	background-image: url(:/area/area/saida2.png);\n"
 "	background-repeat:none;\n"
-"	color:rgb(59,81,127);\n"
+"	color:white;\n"
 "	font: 10pt \"Segoe UI\";\n"
 "}\n"
 "QPushButton:hover{\n"
-"	border:1px solid #0090d8;\n"
+"	border:2px solid #0090d8;\n"
 "}"));
         pushButton_3 = new QPushButton(areadegestao);
         pushButton_3->setObjectName("pushButton_3");
@@ -117,14 +99,14 @@ public:
         pushButton_3->setCursor(QCursor(Qt::PointingHandCursor));
         pushButton_3->setStyleSheet(QString::fromUtf8("QPushButton{	\n"
 "	border:1px solid white;\n"
-"	background-color:white;\n"
+"	background-color: rgb(72, 145, 217);\n"
 "	background-repeat:none;\n"
 "	background-image: url(:/area/area/relatorio.png);\n"
-"	color:rgb(59,81,127);\n"
+"	color:white;\n"
 "	font: 10pt \"Segoe UI\";\n"
 "}\n"
 "QPushButton:hover{\n"
-"	border:1px solid #0090d8;\n"
+"	border:2px solid #0090d8;\n"
 "}"));
         pushButton = new QPushButton(areadegestao);
         pushButton->setObjectName("pushButton");
@@ -135,10 +117,10 @@ public:
         pushButton->setCursor(QCursor(Qt::PointingHandCursor));
         pushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	border:1px solid white;\n"
-"	background-color:white;\n"
+"	background-color: rgb(72, 145, 217);\n"
 "	background-image: url(:/area/area/cash.png);\n"
 "	background-repeat:none;\n"
-"	color:rgb(59,81,127);\n"
+"	color:white;\n"
 "	font: 10pt \"Segoe UI\";\n"
 "}\n"
 "QPushButton:hover{\n"
@@ -154,14 +136,14 @@ public:
         pushButton_2->setCursor(QCursor(Qt::PointingHandCursor));
         pushButton_2->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	border:1px solid white;\n"
-"	background-color:white;\n"
-"	color:rgb(59,81,127);\n"
+"	background-color: rgb(72, 145, 217);\n"
+"	color:white;\n"
 "	font: 10pt \"Segoe UI\";\n"
 "	background-image: url(:/area/area/edit.png);\n"
 "	background-repeat:none;\n"
 "}\n"
 "QPushButton:hover{\n"
-"	border:1.2px solid #0090d8;\n"
+"	border:2px solid #0090d8;\n"
 "}\n"
 "	"));
         label = new QLabel(areadegestao);
@@ -179,6 +161,17 @@ public:
         label_2->setGeometry(QRect(450, 200, 71, 61));
         label_2->setStyleSheet(QString::fromUtf8("background-image: url(:/area/area/ola.png);\n"
 "background-repeat:none;"));
+        line = new QFrame(areadegestao);
+        line->setObjectName("line");
+        line->setGeometry(QRect(270, 0, 10, 639));
+        line->setMinimumSize(QSize(10, 0));
+        line->setMaximumSize(QSize(10, 16777215));
+        line->setStyleSheet(QString::fromUtf8("Line{\n"
+"	background-color:rgb(59,81,127);\n"
+"	border:none;\n"
+"}"));
+        line->setFrameShape(QFrame::VLine);
+        line->setFrameShadow(QFrame::Sunken);
 
         retranslateUi(areadegestao);
 

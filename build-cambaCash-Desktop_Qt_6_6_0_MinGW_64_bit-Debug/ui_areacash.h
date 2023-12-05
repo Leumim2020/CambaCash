@@ -54,15 +54,19 @@ public:
         QFont font;
         font.setPointSize(20);
         areacash->setFont(font);
-        areacash->setStyleSheet(QString::fromUtf8("background-color:rgb(59, 81, 127);\n"
-""));
+        areacash->setStyleSheet(QString::fromUtf8("QDialog{\n"
+"	background-color:white;\n"
+"	color:white;\n"
+"}"));
         line = new QFrame(areacash);
         line->setObjectName("line");
         line->setGeometry(QRect(240, 0, 10, 639));
         line->setMinimumSize(QSize(10, 0));
         line->setMaximumSize(QSize(10, 16777215));
-        line->setStyleSheet(QString::fromUtf8("background-color:white;\n"
-"border:none;"));
+        line->setStyleSheet(QString::fromUtf8("Line{\n"
+"	background-color:rgb(59,81,127);\n"
+"	border:none;\n"
+"}"));
         line->setFrameShape(QFrame::VLine);
         line->setFrameShadow(QFrame::Sunken);
         label_3 = new QLabel(areacash);
@@ -91,20 +95,21 @@ public:
         pushButton_conta_2->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	border:1px solid white;\n"
 "	font: 10pt \"Segoe UI\";\n"
-"	background-color:white;\n"
-"	color:rgb(59,81,127);\n"
+"	background-color: rgb(72, 145, 217);\n"
+"	color:white;\n"
 "}\n"
 "QPushButton:hover{\n"
-"	border:1px solid #0090d8;\n"
+"	border:2px solid #0090d8;\n"
 "}"));
         label_5 = new QLabel(areacash);
         label_5->setObjectName("label_5");
         label_5->setGeometry(QRect(260, 500, 61, 31));
         label_5->setCursor(QCursor(Qt::PointingHandCursor));
-        label_5->setStyleSheet(QString::fromUtf8("background-color:rgb(255, 255, 255);\n"
-"font: 10pt \"Segoe UI\";\n"
-"color:rgb(59,81,127);\n"
-""));
+        label_5->setStyleSheet(QString::fromUtf8("QLabel{\n"
+"	background-color:rgb(59,81,127);\n"
+"	font:  11pt \"Segoe UI\";\n"
+"	color: rgb(255, 212, 38);\n"
+"}"));
         pushButton = new QPushButton(areacash);
         pushButton->setObjectName("pushButton");
         pushButton->setGeometry(QRect(70, 290, 100, 30));
@@ -114,18 +119,18 @@ public:
         pushButton->setCursor(QCursor(Qt::PointingHandCursor));
         pushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	border:1px solid white;\n"
-"	background-image: url(:/area/area/back.png);\n"
+"	background-image: url(:/area/area/saida2.png);\n"
 "	background-repeat:none;\n"
 "	font: 10pt \"Segoe UI\";\n"
-"	background-color:white;\n"
-"	color:rgb(59,81,127);\n"
+"	background-color: rgb(72, 145, 217);\n"
+"	color:white;\n"
 "}\n"
 "QPushButton:hover{\n"
-"	border:1px solid #0090d8;\n"
+"	border:2px solid #0090d8;\n"
 "}"));
         pushButton_conta = new QPushButton(areacash);
         pushButton_conta->setObjectName("pushButton_conta");
-        pushButton_conta->setGeometry(QRect(40, 230, 170, 30));
+        pushButton_conta->setGeometry(QRect(40, 230, 170, 31));
         pushButton_conta->setMinimumSize(QSize(170, 30));
         pushButton_conta->setMaximumSize(QSize(0, 16777215));
         pushButton_conta->setFont(font1);
@@ -135,11 +140,11 @@ public:
 "	background-repeat:none;\n"
 "	background-image: url(:/area/area/relatorio.png);\n"
 "	font: 10pt \"Segoe UI\";\n"
-"	background-color:white;\n"
-"	color:rgb(59,81,127);\n"
+"	background-color: rgb(72, 145, 217);\n"
+"	color:white;\n"
 "}\n"
 "QPushButton:hover{\n"
-"	border:1px solid #0090d8;\n"
+"	border:2px solid #0090d8;\n"
 "}"));
         pushButton_conta->setIconSize(QSize(14, 16));
         undoView = new QUndoView(areacash);
@@ -149,14 +154,17 @@ public:
         font2.setPointSize(9);
         font2.setBold(true);
         undoView->setFont(font2);
-        undoView->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        undoView->setStyleSheet(QString::fromUtf8("QUndoView{\n"
+"	background-color: rgb(59,81,127);\n"
+"}"));
         calendar = new QCalendarWidget(areacash);
         calendar->setObjectName("calendar");
         calendar->setEnabled(false);
         calendar->setGeometry(QRect(490, 240, 371, 231));
         calendar->setCursor(QCursor(Qt::PointingHandCursor));
-        calendar->setStyleSheet(QString::fromUtf8("color:black;\n"
-"font: 10pt \"Segoe UI\";"));
+        calendar->setStyleSheet(QString::fromUtf8("QCalendarWidget{\n"
+"	font: 9pt \"Segoe UI\";\n"
+"}"));
         calendar->setGridVisible(true);
         calendar->setSelectionMode(QCalendarWidget::SingleSelection);
         calendar->setHorizontalHeaderFormat(QCalendarWidget::ShortDayNames);
@@ -175,10 +183,12 @@ public:
         font3.setItalic(false);
         boxarea->setFont(font3);
         boxarea->setCursor(QCursor(Qt::PointingHandCursor));
-        boxarea->setStyleSheet(QString::fromUtf8("border:none;\n"
-"font: 13pt \"Segoe UI\";\n"
-"color: rgb(255, 255, 255);\n"
-"\n"
+        boxarea->setStyleSheet(QString::fromUtf8("QComboBox{\n"
+"	border:1px solid white;\n"
+"	background-color:white;\n"
+"	font: 13pt \"Segoe UI\";\n"
+"	color: rgb(59, 81, 127);\n"
+"}\n"
 "\n"
 ""));
         boxarea->setEditable(false);
@@ -186,13 +196,16 @@ public:
         boxarea->setFrame(true);
         boxmoney = new QDoubleSpinBox(areacash);
         boxmoney->setObjectName("boxmoney");
-        boxmoney->setGeometry(QRect(270, 390, 211, 40));
+        boxmoney->setGeometry(QRect(270, 400, 211, 40));
         boxmoney->setMinimumSize(QSize(211, 40));
         boxmoney->setMaximumSize(QSize(211, 40));
         boxmoney->setCursor(QCursor(Qt::PointingHandCursor));
-        boxmoney->setStyleSheet(QString::fromUtf8("border:none;\n"
-"font: 12pt \"Segoe UI\";\n"
-"color: rgb(255, 255, 255);"));
+        boxmoney->setStyleSheet(QString::fromUtf8("QDoubleSpinBox{\n"
+"	border:1px solid white;\n"
+"	background-color:white;\n"
+"	font: 13pt \"Segoe UI\";\n"
+"	color:rgb(59, 81, 127);\n"
+"}"));
         boxmoney->setDecimals(2);
         boxmoney->setMaximum(100000000.000000000000000);
         boxmoney->setStepType(QAbstractSpinBox::DefaultStepType);
@@ -200,24 +213,32 @@ public:
         label_7->setObjectName("label_7");
         label_7->setGeometry(QRect(270, 370, 211, 21));
         label_7->setCursor(QCursor(Qt::PointingHandCursor));
-        label_7->setStyleSheet(QString::fromUtf8("font: 10pt \"Segoe UI\";\n"
-"color: white;"));
+        label_7->setStyleSheet(QString::fromUtf8("QLabel{\n"
+"	border:none;\n"
+"	background-color:rgb(59, 81, 127);\n"
+"	font: 10pt \"Segoe UI\";\n"
+"	color: rgb(255, 255, 255);\n"
+"}"));
         label_8 = new QLabel(areacash);
         label_8->setObjectName("label_8");
         label_8->setGeometry(QRect(260, 190, 231, 31));
         label_8->setCursor(QCursor(Qt::ArrowCursor));
         label_8->setStyleSheet(QString::fromUtf8("font: 13pt \"Segoe UI \";\n"
-"color: rgb(185, 185, 185);\n"
+"color: rgb(59,81,127);\n"
 ""));
         label_test = new QLabel(areacash);
         label_test->setObjectName("label_test");
-        label_test->setGeometry(QRect(270, 580, 81, 41));
+        label_test->setGeometry(QRect(270, 580, 191, 41));
         label_9 = new QLabel(areacash);
         label_9->setObjectName("label_9");
-        label_9->setGeometry(QRect(270, 290, 211, 21));
+        label_9->setGeometry(QRect(270, 280, 211, 21));
         label_9->setCursor(QCursor(Qt::PointingHandCursor));
-        label_9->setStyleSheet(QString::fromUtf8("font: 10pt \"Segoe UI\";\n"
-"color: white;"));
+        label_9->setStyleSheet(QString::fromUtf8("QLabel{\n"
+"	border:none;\n"
+"	background-color:rgb(59, 81, 127);\n"
+"	font: 10pt \"Segoe UI\";\n"
+"	color: rgb(255, 255, 255);\n"
+"}"));
         label_2 = new QLabel(areacash);
         label_2->setObjectName("label_2");
         label_2->setGeometry(QRect(500, 190, 41, 31));
@@ -227,17 +248,20 @@ public:
         label_time->setObjectName("label_time");
         label_time->setGeometry(QRect(310, 500, 51, 31));
         label_time->setCursor(QCursor(Qt::PointingHandCursor));
-        label_time->setStyleSheet(QString::fromUtf8("background-color:rgb(255, 255, 255);\n"
-"font: 10pt \"Segoe UI\";\n"
-"color:rgb(59,81,127);\n"
-""));
+        label_time->setStyleSheet(QString::fromUtf8("QLabel{\n"
+"	background-color:rgb(59,81,127);\n"
+"	font:  11pt \"Segoe UI\";\n"
+"	color: rgb(255, 212, 38);\n"
+"}"));
         label_period = new QLabel(areacash);
         label_period->setObjectName("label_period");
         label_period->setGeometry(QRect(360, 500, 31, 31));
         label_period->setCursor(QCursor(Qt::PointingHandCursor));
-        label_period->setStyleSheet(QString::fromUtf8("background-color:rgb(255, 255, 255);\n"
-"font:  11pt \"Segoe UI\";\n"
-"color: rgb(255, 212, 38);"));
+        label_period->setStyleSheet(QString::fromUtf8("QLabel{\n"
+"	background-color:rgb(59,81,127);\n"
+"	font:  11pt \"Segoe UI\";\n"
+"	color: rgb(255, 212, 38);\n"
+"}"));
         QWidget::setTabOrder(boxarea, boxmoney);
         QWidget::setTabOrder(boxmoney, pushButton_conta_2);
         QWidget::setTabOrder(pushButton_conta_2, undoView);

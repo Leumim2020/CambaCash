@@ -81,7 +81,6 @@ void areacash::on_pushButton_conta_2_clicked()
 
     }else{
 
-
         QMessageBox::StandardButton answer = QMessageBox::question(this,"Informação","Verifique se dados estão bem preenchidos antes de submeter conta",QMessageBox::Yes|QMessageBox::No);
 
         if(db_connect.isOpen()){

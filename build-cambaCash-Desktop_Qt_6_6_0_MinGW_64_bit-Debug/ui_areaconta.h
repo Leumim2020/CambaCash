@@ -56,15 +56,18 @@ public:
         areaconta->setMinimumSize(QSize(940, 780));
         areaconta->setMaximumSize(QSize(940, 780));
         areaconta->setStyleSheet(QString::fromUtf8("QDialog{\n"
-"	background-color:rgb(59, 81, 127);\n"
+"	background-color:white;\n"
+"	color:white;\n"
 "}"));
         line = new QFrame(areaconta);
         line->setObjectName("line");
         line->setGeometry(QRect(240, 0, 10, 781));
         line->setMinimumSize(QSize(10, 0));
         line->setMaximumSize(QSize(10, 16777215));
-        line->setStyleSheet(QString::fromUtf8("background-color:white;\n"
-"border:none;"));
+        line->setStyleSheet(QString::fromUtf8("Line{\n"
+"	background-color:rgb(59,81,127);\n"
+"	border:none;\n"
+"}"));
         line->setFrameShape(QFrame::VLine);
         line->setFrameShadow(QFrame::Sunken);
         pushButton = new QPushButton(areaconta);
@@ -81,50 +84,61 @@ public:
         pushButton->setCursor(QCursor(Qt::PointingHandCursor));
         pushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	border:1px solid white;\n"
-"	background-image: url(:/area/area/back.png);\n"
+"	background-image: url(:/area/area/saida2.png);\n"
 "	background-repeat:none;\n"
 "	font: 10pt \"Segoe UI\";\n"
-"	background-color:white;\n"
-"	color:rgb(59,81,127);\n"
+"	background-color: rgb(72, 145, 217);\n"
+"	color:white;\n"
 "}\n"
 "QPushButton:hover{\n"
-"	border:1px solid #0090d8;\n"
+"	border:2px solid #0090d8;\n"
 "}"));
         label_4 = new QLabel(areaconta);
         label_4->setObjectName("label_4");
         label_4->setGeometry(QRect(110, 80, 61, 31));
         label_4->setCursor(QCursor(Qt::PointingHandCursor));
-        label_4->setStyleSheet(QString::fromUtf8("font: 900 15pt \"Segoe UI\";\n"
-"color: rgb(255, 212, 38);"));
+        label_4->setStyleSheet(QString::fromUtf8("QLabel{\n"
+"	font: 900 15pt \"Segoe UI\";\n"
+"	color: rgb(255, 212, 38);\n"
+"}"));
         label_3 = new QLabel(areaconta);
         label_3->setObjectName("label_3");
         label_3->setGeometry(QRect(70, 60, 41, 61));
         label_3->setCursor(QCursor(Qt::PointingHandCursor));
-        label_3->setStyleSheet(QString::fromUtf8("font: 600 45pt \"Segoe UI Semibold\";\n"
-"color: rgb(185, 185, 185);\n"
+        label_3->setStyleSheet(QString::fromUtf8("QLabel{\n"
+"	font: 600 45pt \"Segoe UI Semibold\";\n"
+"	color: rgb(185, 185, 185);\n"
+"}\n"
 ""));
         label_8 = new QLabel(areaconta);
         label_8->setObjectName("label_8");
         label_8->setGeometry(QRect(270, 190, 181, 31));
         label_8->setCursor(QCursor(Qt::ArrowCursor));
-        label_8->setStyleSheet(QString::fromUtf8("font: 13pt \"Segoe UI \";\n"
-"color: rgb(185, 185, 185);\n"
+        label_8->setStyleSheet(QString::fromUtf8("QLabel{\n"
+"	font: 13pt \"Segoe UI \";\n"
+"	color: rgb(59,81,127);\n"
+"}\n"
 ""));
         label_2 = new QLabel(areaconta);
         label_2->setObjectName("label_2");
         label_2->setGeometry(QRect(460, 190, 31, 31));
-        label_2->setStyleSheet(QString::fromUtf8("background-image: url(:/area/area/relatorio.png);\n"
-"background-repeat:none;"));
+        label_2->setStyleSheet(QString::fromUtf8("QLabel{\n"
+"	background-image: url(:/area/area/relatorio.png);\n"
+"	background-repeat:none;\n"
+"}"));
         dateEdit = new QDateEdit(areaconta);
         dateEdit->setObjectName("dateEdit");
         dateEdit->setEnabled(true);
-        dateEdit->setGeometry(QRect(520, 200, 150, 30));
+        dateEdit->setGeometry(QRect(510, 180, 150, 30));
         dateEdit->setMinimumSize(QSize(150, 30));
         dateEdit->setMaximumSize(QSize(150, 30));
-        dateEdit->setStyleSheet(QString::fromUtf8("border:none;\n"
-"background-color: white;\n"
-"color:rgb(59, 81, 127);\n"
-"font: 10pt \"Segoe UI\";\n"
+        dateEdit->setCursor(QCursor(Qt::PointingHandCursor));
+        dateEdit->setStyleSheet(QString::fromUtf8("QDateEdit{\n"
+"	border:1px solid rgb(59, 81, 127);\n"
+"	background-color: white;\n"
+"	color:rgb(59, 81, 127);\n"
+"	font: 10pt \"Segoe UI\";\n"
+"}\n"
 "\n"
 ""));
         dateEdit->setLocale(QLocale(QLocale::Portuguese, QLocale::Portugal));
@@ -136,18 +150,18 @@ public:
         dateEdit->setDate(QDate(2023, 11, 23));
         pushButton_2 = new QPushButton(areaconta);
         pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(840, 200, 80, 30));
+        pushButton_2->setGeometry(QRect(830, 180, 80, 30));
         pushButton_2->setMinimumSize(QSize(80, 30));
         pushButton_2->setMaximumSize(QSize(80, 30));
         pushButton_2->setCursor(QCursor(Qt::PointingHandCursor));
         pushButton_2->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"	border:none;\n"
+"	border:1px solid white;\n"
 "	image: url(:/area/area/cash.png);\n"
 "	background-repeat:none;\n"
-"	background-color:white;\n"
+"	background-color: rgb(72, 145, 217);\n"
 "}\n"
 "QPushButton:hover{\n"
-"	border:1px solid #0090d8;\n"
+"	border:2px solid #0090d8;\n"
 "}"));
         tableWidget = new QTableWidget(areaconta);
         if (tableWidget->columnCount() < 6)
@@ -166,7 +180,7 @@ public:
         tableWidget->setHorizontalHeaderItem(5, __qtablewidgetitem5);
         tableWidget->setObjectName("tableWidget");
         tableWidget->setEnabled(true);
-        tableWidget->setGeometry(QRect(270, 240, 649, 351));
+        tableWidget->setGeometry(QRect(260, 230, 649, 351));
         tableWidget->setMinimumSize(QSize(649, 351));
         tableWidget->setMaximumSize(QSize(649, 351));
         QFont font1;
@@ -175,14 +189,15 @@ public:
         tableWidget->setFont(font1);
         tableWidget->viewport()->setProperty("cursor", QVariant(QCursor(Qt::ArrowCursor)));
         tableWidget->setStyleSheet(QString::fromUtf8("QTableWidget{\n"
-"	background-color: rgb(255, 255, 255);\n"
-"	color:rgb(59, 81, 127);\n"
+"	background-color: rgb(59,81,127);\n"
+"	color:white;\n"
 "}"));
         tableWidget->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
         tableWidget->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
         tableWidget->setSizeAdjustPolicy(QAbstractScrollArea::AdjustToContentsOnFirstShow);
         tableWidget->setAutoScroll(true);
         tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
+        tableWidget->setSelectionMode(QAbstractItemView::ExtendedSelection);
         tableWidget->setSelectionBehavior(QAbstractItemView::SelectRows);
         tableWidget->setShowGrid(true);
         tableWidget->setGridStyle(Qt::DashLine);
@@ -213,11 +228,11 @@ public:
 "	border:1px solid white;\n"
 "	background-repeat:none;\n"
 "	font: 10pt \"Segoe UI\";\n"
-"	background-color:white;\n"
-"	color:rgb(59,81,127);\n"
+"	background-color: rgb(72, 145, 217);\n"
+"	color:white;\n"
 "}\n"
 "QPushButton:hover{\n"
-"	border:1px solid #0090d8;\n"
+"	border:2px solid #0090d8;\n"
 "}"));
         pushButton_delete = new QPushButton(areaconta);
         pushButton_delete->setObjectName("pushButton_delete");
@@ -230,11 +245,11 @@ public:
 "	border:1px solid white;\n"
 "	background-repeat:none;\n"
 "	font: 10pt \"Segoe UI\";\n"
-"	background-color:white;\n"
-"	color:rgb(59,81,127);\n"
+"	background-color: rgb(72, 145, 217);\n"
+"	color:white;\n"
 "}\n"
 "QPushButton:hover{\n"
-"	border:1px solid #0090d8;\n"
+"	border:2px solid #0090d8;\n"
 "}"));
         pushButton_relatory_pdf = new QPushButton(areaconta);
         pushButton_relatory_pdf->setObjectName("pushButton_relatory_pdf");
@@ -248,8 +263,8 @@ public:
 "	border:1px solid white;\n"
 "	background-repeat:none;\n"
 "	font: 10pt \"Segoe UI\";\n"
-"	background-color:white;\n"
-"	color:rgb(59,81,127);\n"
+"	background-color:rgb(59,81,127);\n"
+"	color:white;\n"
 "}\n"
 "QPushButton:hover{\n"
 "	border:1px solid #0090d8;\n"
@@ -260,8 +275,9 @@ public:
         lineEdit_Delete->setMinimumSize(QSize(100, 30));
         lineEdit_Delete->setMaximumSize(QSize(100, 30));
         lineEdit_Delete->setStyleSheet(QString::fromUtf8("QLineEdit{\n"
-"	background-color:#fff;\n"
-"	color:rgb(59,81,127);\n"
+"	border:1px solid rgb(59, 81, 127);\n"
+"	background-color:white;\n"
+"	color:rgb(59, 81, 127);\n"
 "}"));
         lineEdit_Delete->setMaxLength(10);
         dateEdit_Delete = new QDateEdit(areaconta);
@@ -270,10 +286,12 @@ public:
         dateEdit_Delete->setGeometry(QRect(270, 710, 100, 30));
         dateEdit_Delete->setMinimumSize(QSize(100, 30));
         dateEdit_Delete->setMaximumSize(QSize(100, 30));
-        dateEdit_Delete->setStyleSheet(QString::fromUtf8("border:none;\n"
-"background-color:white;\n"
-"color:rgb(59, 81, 127);\n"
-"font: 10pt \"Segoe UI\";\n"
+        dateEdit_Delete->setStyleSheet(QString::fromUtf8("QDateEdit{\n"
+"	border:1px solid rgb(59, 81, 127);\n"
+"	background-color:white;\n"
+"	color:rgb(59, 81, 127);\n"
+"	font: 10pt \"Segoe UI\";\n"
+"}\n"
 "\n"
 ""));
         dateEdit_Delete->setReadOnly(false);
@@ -286,15 +304,19 @@ public:
         label_9->setObjectName("label_9");
         label_9->setGeometry(QRect(270, 680, 211, 21));
         label_9->setCursor(QCursor(Qt::ArrowCursor));
-        label_9->setStyleSheet(QString::fromUtf8("font: 9pt \"Segoe UI \";\n"
-"color: rgb(185, 185, 185);\n"
+        label_9->setStyleSheet(QString::fromUtf8("QLabel{\n"
+"	font: 9pt \"Segoe UI \";\n"
+"	color:rgb(59,81,127);\n"
+"}\n"
 ""));
         label_10 = new QLabel(areaconta);
         label_10->setObjectName("label_10");
         label_10->setGeometry(QRect(270, 610, 231, 21));
         label_10->setCursor(QCursor(Qt::ArrowCursor));
-        label_10->setStyleSheet(QString::fromUtf8("font: 9pt \"Segoe UI \";\n"
-"color: rgb(185, 185, 185);\n"
+        label_10->setStyleSheet(QString::fromUtf8("QLabel{\n"
+"	font: 9pt \"Segoe UI \";\n"
+"	color:rgb(59,81,127);\n"
+"}\n"
 ""));
         comboBox_month = new QComboBox(areaconta);
         comboBox_month->addItem(QString());
@@ -311,27 +333,32 @@ public:
         comboBox_month->addItem(QString());
         comboBox_month->addItem(QString());
         comboBox_month->setObjectName("comboBox_month");
-        comboBox_month->setGeometry(QRect(680, 200, 150, 30));
+        comboBox_month->setGeometry(QRect(670, 180, 150, 30));
         comboBox_month->setMinimumSize(QSize(150, 30));
         comboBox_month->setMaximumSize(QSize(150, 30));
+        comboBox_month->setCursor(QCursor(Qt::PointingHandCursor));
         comboBox_month->setStyleSheet(QString::fromUtf8("QComboBox{\n"
 "	background-color:white;\n"
-"	border:none;\n"
+"	border:1px solid rgb(59, 81, 127);\n"
 "	color: rgb(59, 81, 127);\n"
 "}"));
         label_11 = new QLabel(areaconta);
         label_11->setObjectName("label_11");
-        label_11->setGeometry(QRect(680, 180, 31, 21));
+        label_11->setGeometry(QRect(670, 160, 31, 21));
         label_11->setCursor(QCursor(Qt::ArrowCursor));
-        label_11->setStyleSheet(QString::fromUtf8("font: 9pt \"Segoe UI \";\n"
-"color: rgb(185, 185, 185);\n"
+        label_11->setStyleSheet(QString::fromUtf8("QLabel{\n"
+"	font: 9pt \"Segoe UI \";\n"
+"	color: rgb(59,81,127);\n"
+"}\n"
 ""));
         label_12 = new QLabel(areaconta);
         label_12->setObjectName("label_12");
-        label_12->setGeometry(QRect(520, 180, 41, 21));
+        label_12->setGeometry(QRect(510, 160, 41, 21));
         label_12->setCursor(QCursor(Qt::ArrowCursor));
-        label_12->setStyleSheet(QString::fromUtf8("font: 9pt \"Segoe UI \";\n"
-"color: rgb(185, 185, 185);\n"
+        label_12->setStyleSheet(QString::fromUtf8("QLabel{\n"
+"	font: 9pt \"Segoe UI \";\n"
+"	color: rgb(59,81,127);\n"
+"}\n"
 ""));
         QWidget::setTabOrder(dateEdit, pushButton_2);
         QWidget::setTabOrder(pushButton_2, pushButton);

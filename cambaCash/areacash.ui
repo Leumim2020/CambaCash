@@ -31,8 +31,10 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:rgb(59, 81, 127);
-</string>
+   <string notr="true">QDialog{
+	background-color:white;
+	color:white;
+}</string>
   </property>
   <widget class="Line" name="line">
    <property name="geometry">
@@ -56,8 +58,10 @@
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:white;
-border:none;</string>
+    <string notr="true">Line{
+	background-color:rgb(59,81,127);
+	border:none;
+}</string>
    </property>
    <property name="orientation">
     <enum>Qt::Vertical</enum>
@@ -128,11 +132,11 @@ color: rgb(255, 212, 38);</string>
     <string notr="true">QPushButton{
 	border:1px solid white;
 	font: 10pt &quot;Segoe UI&quot;;
-	background-color:white;
-	color:rgb(59,81,127);
+	background-color: rgb(72, 145, 217);
+	color:white;
 }
 QPushButton:hover{
-	border:1px solid #0090d8;
+	border:2px solid #0090d8;
 }</string>
    </property>
    <property name="text">
@@ -152,10 +156,11 @@ QPushButton:hover{
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:rgb(255, 255, 255);
-font: 10pt &quot;Segoe UI&quot;;
-color:rgb(59,81,127);
-</string>
+    <string notr="true">QLabel{
+	background-color:rgb(59,81,127);
+	font:  11pt &quot;Segoe UI&quot;;
+	color: rgb(255, 212, 38);
+}</string>
    </property>
    <property name="text">
     <string>HORA:</string>
@@ -196,14 +201,14 @@ color:rgb(59,81,127);
    <property name="styleSheet">
     <string notr="true">QPushButton{
 	border:1px solid white;
-	background-image: url(:/area/area/back.png);
+	background-image: url(:/area/area/saida2.png);
 	background-repeat:none;
 	font: 10pt &quot;Segoe UI&quot;;
-	background-color:white;
-	color:rgb(59,81,127);
+	background-color: rgb(72, 145, 217);
+	color:white;
 }
 QPushButton:hover{
-	border:1px solid #0090d8;
+	border:2px solid #0090d8;
 }</string>
    </property>
    <property name="text">
@@ -216,7 +221,7 @@ QPushButton:hover{
      <x>40</x>
      <y>230</y>
      <width>170</width>
-     <height>30</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="minimumSize">
@@ -248,11 +253,11 @@ QPushButton:hover{
 	background-repeat:none;
 	background-image: url(:/area/area/relatorio.png);
 	font: 10pt &quot;Segoe UI&quot;;
-	background-color:white;
-	color:rgb(59,81,127);
+	background-color: rgb(72, 145, 217);
+	color:white;
 }
 QPushButton:hover{
-	border:1px solid #0090d8;
+	border:2px solid #0090d8;
 }</string>
    </property>
    <property name="text">
@@ -284,7 +289,9 @@ QPushButton:hover{
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">QUndoView{
+	background-color: rgb(59,81,127);
+}</string>
    </property>
   </widget>
   <widget class="QCalendarWidget" name="calendar">
@@ -303,8 +310,9 @@ QPushButton:hover{
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:black;
-font: 10pt &quot;Segoe UI&quot;;</string>
+    <string notr="true">QCalendarWidget{
+	font: 9pt &quot;Segoe UI&quot;;
+}</string>
    </property>
    <property name="gridVisible">
     <bool>true</bool>
@@ -358,10 +366,12 @@ font: 10pt &quot;Segoe UI&quot;;</string>
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:none;
-font: 13pt &quot;Segoe UI&quot;;
-color: rgb(255, 255, 255);
-
+    <string notr="true">QComboBox{
+	border:1px solid white;
+	background-color:white;
+	font: 13pt &quot;Segoe UI&quot;;
+	color: rgb(59, 81, 127);
+}
 
 </string>
    </property>
@@ -385,7 +395,7 @@ color: rgb(255, 255, 255);
    <property name="geometry">
     <rect>
      <x>270</x>
-     <y>390</y>
+     <y>400</y>
      <width>211</width>
      <height>40</height>
     </rect>
@@ -406,9 +416,12 @@ color: rgb(255, 255, 255);
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:none;
-font: 12pt &quot;Segoe UI&quot;;
-color: rgb(255, 255, 255);</string>
+    <string notr="true">QDoubleSpinBox{
+	border:1px solid white;
+	background-color:white;
+	font: 13pt &quot;Segoe UI&quot;;
+	color:rgb(59, 81, 127);
+}</string>
    </property>
    <property name="suffix">
     <string>           AOA</string>
@@ -436,8 +449,12 @@ color: rgb(255, 255, 255);</string>
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 10pt &quot;Segoe UI&quot;;
-color: white;</string>
+    <string notr="true">QLabel{
+	border:none;
+	background-color:rgb(59, 81, 127);
+	font: 10pt &quot;Segoe UI&quot;;
+	color: rgb(255, 255, 255);
+}</string>
    </property>
    <property name="text">
     <string>DIGITE QUANTIA ARRECADADA</string>
@@ -457,7 +474,7 @@ color: white;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">font: 13pt &quot;Segoe UI &quot;;
-color: rgb(185, 185, 185);
+color: rgb(59,81,127);
 </string>
    </property>
    <property name="text">
@@ -469,7 +486,7 @@ color: rgb(185, 185, 185);
     <rect>
      <x>270</x>
      <y>580</y>
-     <width>81</width>
+     <width>191</width>
      <height>41</height>
     </rect>
    </property>
@@ -481,7 +498,7 @@ color: rgb(185, 185, 185);
    <property name="geometry">
     <rect>
      <x>270</x>
-     <y>290</y>
+     <y>280</y>
      <width>211</width>
      <height>21</height>
     </rect>
@@ -490,8 +507,12 @@ color: rgb(185, 185, 185);
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 10pt &quot;Segoe UI&quot;;
-color: white;</string>
+    <string notr="true">QLabel{
+	border:none;
+	background-color:rgb(59, 81, 127);
+	font: 10pt &quot;Segoe UI&quot;;
+	color: rgb(255, 255, 255);
+}</string>
    </property>
    <property name="text">
     <string>SELECIONA ÁREA CAMBA</string>
@@ -527,10 +548,11 @@ background-repeat:none;</string>
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:rgb(255, 255, 255);
-font: 10pt &quot;Segoe UI&quot;;
-color:rgb(59,81,127);
-</string>
+    <string notr="true">QLabel{
+	background-color:rgb(59,81,127);
+	font:  11pt &quot;Segoe UI&quot;;
+	color: rgb(255, 212, 38);
+}</string>
    </property>
    <property name="text">
     <string>   00:00</string>
@@ -549,9 +571,11 @@ color:rgb(59,81,127);
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:rgb(255, 255, 255);
-font:  11pt &quot;Segoe UI&quot;;
-color: rgb(255, 212, 38);</string>
+    <string notr="true">QLabel{
+	background-color:rgb(59,81,127);
+	font:  11pt &quot;Segoe UI&quot;;
+	color: rgb(255, 212, 38);
+}</string>
    </property>
    <property name="text">
     <string>   --</string>

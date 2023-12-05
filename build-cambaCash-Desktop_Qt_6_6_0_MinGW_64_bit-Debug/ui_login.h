@@ -40,7 +40,9 @@ public:
         login->resize(290, 360);
         login->setMinimumSize(QSize(290, 360));
         login->setMaximumSize(QSize(290, 360));
-        login->setStyleSheet(QString::fromUtf8("background-color: rgb(59, 81, 127);"));
+        login->setStyleSheet(QString::fromUtf8("QMainWindow{\n"
+"	background-color:white;\n"
+"}"));
         centralwidget = new QWidget(login);
         centralwidget->setObjectName("centralwidget");
         btnentrar = new QPushButton(centralwidget);
@@ -55,16 +57,17 @@ public:
         btnentrar->setCursor(QCursor(Qt::PointingHandCursor));
         btnentrar->setMouseTracking(true);
         btnentrar->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"	background-color:white;\n"
-"	background-image: url(:/area/area/in.png);\n"
+"	background-color: rgb(72, 145, 217);\n"
+"	background-image: url(:/area/area/saida.png);\n"
 "	background-repeat:none;\n"
 "	font: 10pt \"Segoe UI\";\n"
 "	border: 1px solid white;\n"
-"	color:rgb(59,81,127);\n"
+"	color:white;\n"
 "}\n"
 "QPushButton:hover{\n"
-"	border:1.2px solid #0090d8;\n"
+"	border:2px solid #0090d8;\n"
 "}"));
+        btnentrar->setAutoDefault(true);
         label_3 = new QLabel(centralwidget);
         label_3->setObjectName("label_3");
         label_3->setGeometry(QRect(90, 40, 41, 61));
@@ -76,7 +79,11 @@ public:
         line_user->setMinimumSize(QSize(0, 0));
         line_user->setCursor(QCursor(Qt::IBeamCursor));
         line_user->setMouseTracking(false);
-        line_user->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        line_user->setStyleSheet(QString::fromUtf8("QLineEdit{\n"
+"	background-color: white;\n"
+"	border:1px solid rgb(59, 81, 127);\n"
+"	color: rgb(59,81,127);\n"
+"}"));
         line_user->setMaxLength(8);
         line_pass = new QLineEdit(centralwidget);
         line_pass->setObjectName("line_pass");
@@ -84,7 +91,11 @@ public:
         line_pass->setMinimumSize(QSize(0, 0));
         line_pass->setCursor(QCursor(Qt::IBeamCursor));
         line_pass->setMouseTracking(false);
-        line_pass->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        line_pass->setStyleSheet(QString::fromUtf8("QLineEdit{\n"
+"	background-color: white;\n"
+"	border:1px solid rgb(59, 81, 127);\n"
+"	color: rgb(59,81,127);\n"
+"}"));
         line_pass->setMaxLength(8);
         line_pass->setEchoMode(QLineEdit::Password);
         label_4 = new QLabel(centralwidget);

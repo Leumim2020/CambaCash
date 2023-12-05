@@ -1,5 +1,6 @@
 #ifndef AREACONTA_H
 #define AREACONTA_H
+#define _dateOLD "Thu Nov 23 2023"
 
 #include "cambaconvert.h"
 #include <QDialog>
@@ -24,6 +25,7 @@ private slots:
     void on_pushButton_clicked();
     void on_pushButton_2_clicked();
     void on_pushButton_delete_clicked();
+    void on_pushButton_edit_clicked();
 
 private:
     Ui::areaconta *ui;

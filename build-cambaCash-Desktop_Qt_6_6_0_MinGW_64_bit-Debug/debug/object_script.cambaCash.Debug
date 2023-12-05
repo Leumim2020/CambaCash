@@ -2,6 +2,7 @@ debug/areacash.o
 debug/areaconta.o
 debug/areadegestao.o
 debug/cambaconvert.o
+debug/editaccount.o
 debug/main.o
 debug/login.o
 debug/valiadtionedit.o
@@ -9,5 +10,6 @@ debug/qrc_image.o
 debug/moc_areacash.o
 debug/moc_areaconta.o
 debug/moc_areadegestao.o
+debug/moc_editaccount.o
 debug/moc_login.o
 debug/moc_valiadtionedit.o

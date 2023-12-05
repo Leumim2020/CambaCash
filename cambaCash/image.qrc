@@ -4,10 +4,8 @@
         <file>area/salao.png</file>
         <file>area/zap.png</file>
         <file>area/barbearia.png</file>
-        <file>area/back.png</file>
         <file>area/count.png</file>
         <file>area/countt.png</file>
-        <file>area/in.png</file>
         <file>area/cash.png</file>
         <file>area/edit.png</file>
         <file>area/camba.png</file>
@@ -15,5 +13,9 @@
         <file>area/ola.png</file>
         <file>area/cambaM.png</file>
         <file>area/garoto.png</file>
+        <file>area/garota32.png</file>
+        <file>area/garoto32.png</file>
+        <file>area/saida.png</file>
+        <file>area/saida2.png</file>
     </qresource>
 </RCC>
