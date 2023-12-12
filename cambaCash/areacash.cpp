@@ -66,6 +66,7 @@ void areacash::on_pushButton_clicked()
 
 void areacash::on_pushButton_conta_2_clicked()
 {
+    QLocale locale = QLocale{QLocale::Portuguese, QLocale::Angola};
 
     if(ui->boxarea->currentText().isEmpty() && !ui->boxmoney->value()){
 
@@ -102,7 +103,7 @@ void areacash::on_pushButton_conta_2_clicked()
                     queryR.prepare("INSERT INTO contas(area,dinheiro,data,time,total) VALUES(:area,:money,:date,:time,:total)");
                     queryR.bindValue(":area",ui->boxarea->currentText());
                     queryR.bindValue(":money",ui->boxmoney->value());
-                    queryR.bindValue(":date",ui->calendar->selectedDate().toString());
+                    queryR.bindValue(":date",locale.toString(ui->calendar->selectedDate()));
                     queryR.bindValue(":time",timeHM);
                     queryR.bindValue(":total",totalCurrent);
                     queryR.exec();
@@ -124,4 +125,3 @@ void areacash::on_pushButton_conta_clicked()
     formconta.exec();
     close();
 }
-

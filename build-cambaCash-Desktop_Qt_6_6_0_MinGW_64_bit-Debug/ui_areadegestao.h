@@ -149,6 +149,7 @@ public:
         label = new QLabel(areadegestao);
         label->setObjectName("label");
         label->setGeometry(QRect(490, 260, 121, 141));
+        label->setCursor(QCursor(Qt::PointingHandCursor));
         label->setStyleSheet(QString::fromUtf8("QLabel{\n"
 "	background-image: url(:/area/area/camba.png);\n"
 "	background-repeat:none;\n"
@@ -159,6 +160,7 @@ public:
         label_2 = new QLabel(areadegestao);
         label_2->setObjectName("label_2");
         label_2->setGeometry(QRect(450, 200, 71, 61));
+        label_2->setCursor(QCursor(Qt::PointingHandCursor));
         label_2->setStyleSheet(QString::fromUtf8("background-image: url(:/area/area/ola.png);\n"
 "background-repeat:none;"));
         line = new QFrame(areadegestao);

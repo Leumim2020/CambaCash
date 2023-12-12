@@ -142,21 +142,22 @@ debug/qrc_image.cpp: ../cambaCash/image.qrc \
 		../cambaCash/area/garota32.png \
 		../cambaCash/area/cash.png \
 		../cambaCash/area/salao.png \
-		../cambaCash/area/back.png \
 		../cambaCash/area/ola.png \
+		../cambaCash/area/lua\ (2).png \
+		../cambaCash/area/lua.png \
 		../cambaCash/area/garoto.png \
 		../cambaCash/area/garoto32.png \
 		../cambaCash/area/saida.png \
 		../cambaCash/area/saida2.png \
 		../cambaCash/area/barbearia.png \
 		../cambaCash/area/cambaM.png \
-		../cambaCash/area/in.png \
 		../cambaCash/area/relatorio.png \
 		../cambaCash/area/bar.png \
 		../cambaCash/area/zap.png \
 		../cambaCash/area/countt.png \
 		../cambaCash/area/edit.png \
-		../cambaCash/area/camba.png
+		../cambaCash/area/camba.png \
+		../cambaCash/area/sol.png
 	C:\Qt\6.6.0\mingw_64\bin\rcc.exe -name image --no-zstd ..\cambaCash\image.qrc -o debug\qrc_image.cpp
 
 compiler_moc_predefs_make_all: debug/moc_predefs.h
@@ -3476,7 +3477,6 @@ debug/editaccount.o: ../cambaCash/editaccount.cpp ../cambaCash/editaccount.h \
 		C:/Qt/6.6.0/mingw_64/include/QtGui/qguiapplication.h \
 		C:/Qt/6.6.0/mingw_64/include/QtGui/qinputmethod.h \
 		C:/Qt/6.6.0/mingw_64/include/QtGui/qguiapplication_platform.h \
-		C:/Qt/6.6.0/mingw_64/include/QtWidgets/QComboBox \
 		C:/Qt/6.6.0/mingw_64/include/QtWidgets/QDateEdit \
 		C:/Qt/6.6.0/mingw_64/include/QtWidgets/qdatetimeedit.h \
 		C:/Qt/6.6.0/mingw_64/include/QtWidgets/QDoubleSpinBox \
@@ -3494,7 +3494,6 @@ debug/editaccount.o: ../cambaCash/editaccount.cpp ../cambaCash/editaccount.h \
 		C:/Qt/6.6.0/mingw_64/include/QtWidgets/QPushButton \
 		C:/Qt/6.6.0/mingw_64/include/QtWidgets/qpushbutton.h \
 		C:/Qt/6.6.0/mingw_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/6.6.0/mingw_64/include/QtWidgets/QTimeEdit \
 		C:/Qt/6.6.0/mingw_64/include/QtWidgets/QMessageBox \
 		C:/Qt/6.6.0/mingw_64/include/QtWidgets/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\editaccount.o ..\cambaCash\editaccount.cpp

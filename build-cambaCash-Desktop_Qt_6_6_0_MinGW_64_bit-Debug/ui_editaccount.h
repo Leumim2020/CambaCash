@@ -113,7 +113,7 @@ public:
 "	border:1px solid rgb(59,81,127);\n"
 "	color: rgb(59,81,127);\n"
 "}"));
-        linetotal->setMaxLength(9);
+        linetotal->setMaxLength(3);
         label_8 = new QLabel(editaccount);
         label_8->setObjectName("label_8");
         label_8->setGeometry(QRect(10, 50, 131, 31));
@@ -240,11 +240,12 @@ public:
         boxmoney->setSuffix(QCoreApplication::translate("editaccount", "           AOA", nullptr));
         label_12->setText(QCoreApplication::translate("editaccount", "CONTA-", nullptr));
         label_ID->setText(QCoreApplication::translate("editaccount", "N", nullptr));
+        linetotal->setInputMask(QCoreApplication::translate("editaccount", "00.", nullptr));
         linetotal->setPlaceholderText(QCoreApplication::translate("editaccount", "                                                          AOA", nullptr));
         label_8->setText(QCoreApplication::translate("editaccount", "\303\201REA", nullptr));
         label_9->setText(QCoreApplication::translate("editaccount", "QUANTIA  ARRECADADA", nullptr));
         label_10->setText(QCoreApplication::translate("editaccount", "DATA(DD/MM/YYYY)", nullptr));
-        label_11->setText(QCoreApplication::translate("editaccount", "TOTAL:", nullptr));
+        label_11->setText(QCoreApplication::translate("editaccount", "TOTAL(AOA):", nullptr));
         label_14->setText(QCoreApplication::translate("editaccount", "HORA", nullptr));
         pushButton->setText(QCoreApplication::translate("editaccount", "EDITAR", nullptr));
         linearea->setPlaceholderText(QString());

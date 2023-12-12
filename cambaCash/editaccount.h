@@ -2,6 +2,8 @@
 #define EDITACCOUNT_H
 
 #include <QDialog>
+#include <QDate>
+#include <QDateEdit>
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include <QtSql>

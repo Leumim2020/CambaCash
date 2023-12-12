@@ -18,7 +18,9 @@ editaccount::editaccount(QWidget *parent,int id) :
     queryS.bindValue(":ID",id);
 
     if(queryS.exec()){
+
         queryS.first();
+
         ui->label_ID->setText(queryS.value("id").toString());
         ui->linearea->setText(queryS.value("area").toString());
         ui->boxmoney->setValue(queryS.value("dinheiro").toDouble());
@@ -34,8 +36,11 @@ editaccount::editaccount(QWidget *parent,int id) :
         }else{
             ui->labelperiodo->setText("PM");
         }
-    }
 
+        qDebug() << QDate(queryS.value("data").toDate());
+
+        ui->linetotal->setText(queryS.value("total").toString());
+    }
 }
 
 editaccount::~editaccount()

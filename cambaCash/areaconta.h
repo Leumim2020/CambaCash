@@ -5,6 +5,7 @@
 #include "cambaconvert.h"
 #include <QDialog>
 #include <QDebug>
+#include <QLocale>
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include <QtSql>
@@ -30,6 +31,7 @@ private slots:
 private:
     Ui::areaconta *ui;
     QSqlDatabase db_connect;
+    QLocale locale = QLocale{QLocale::Portuguese, QLocale::Angola};
     cambaconvert *convert_month;
 };
 

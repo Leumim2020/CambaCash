@@ -308,6 +308,9 @@ QPushButton:hover{
      <height>141</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
    <property name="styleSheet">
     <string notr="true">QLabel{
 	background-image: url(:/area/area/camba.png);
@@ -329,6 +332,9 @@ QLabel:hover{
      <width>71</width>
      <height>61</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
     <string notr="true">background-image: url(:/area/area/ola.png);

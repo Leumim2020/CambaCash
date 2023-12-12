@@ -103,7 +103,7 @@ public:
 "}"));
         label_5 = new QLabel(areacash);
         label_5->setObjectName("label_5");
-        label_5->setGeometry(QRect(260, 500, 61, 31));
+        label_5->setGeometry(QRect(260, 500, 61, 41));
         label_5->setCursor(QCursor(Qt::PointingHandCursor));
         label_5->setStyleSheet(QString::fromUtf8("QLabel{\n"
 "	background-color:rgb(59,81,127);\n"
@@ -246,7 +246,7 @@ public:
 "background-repeat:none;"));
         label_time = new QLabel(areacash);
         label_time->setObjectName("label_time");
-        label_time->setGeometry(QRect(310, 500, 51, 31));
+        label_time->setGeometry(QRect(310, 500, 51, 41));
         label_time->setCursor(QCursor(Qt::PointingHandCursor));
         label_time->setStyleSheet(QString::fromUtf8("QLabel{\n"
 "	background-color:rgb(59,81,127);\n"
@@ -255,7 +255,7 @@ public:
 "}"));
         label_period = new QLabel(areacash);
         label_period->setObjectName("label_period");
-        label_period->setGeometry(QRect(360, 500, 31, 31));
+        label_period->setGeometry(QRect(370, 510, 41, 31));
         label_period->setCursor(QCursor(Qt::PointingHandCursor));
         label_period->setStyleSheet(QString::fromUtf8("QLabel{\n"
 "	background-color:rgb(59,81,127);\n"
@@ -294,7 +294,7 @@ public:
         label_9->setText(QCoreApplication::translate("areacash", "SELECIONA \303\201REA CAMBA", nullptr));
         label_2->setText(QString());
         label_time->setText(QCoreApplication::translate("areacash", "   00:00", nullptr));
-        label_period->setText(QCoreApplication::translate("areacash", "   --", nullptr));
+        label_period->setText(QString());
     } // retranslateUi
 
 };

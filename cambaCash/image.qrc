@@ -17,5 +17,8 @@
         <file>area/garoto32.png</file>
         <file>area/saida.png</file>
         <file>area/saida2.png</file>
+        <file>area/lua (2).png</file>
+        <file>area/lua.png</file>
+        <file>area/sol.png</file>
     </qresource>
 </RCC>
